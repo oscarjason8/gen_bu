@@ -121,11 +121,11 @@ class ConnectionManager extends ConnectionManager_Base
 		$data = array();
 		$data["dbType"] = 0;
 		$data["connId"] = "internas_new_at_localhost";
-		$data["connName"] = "ampc_gen at ampuertocortes.hn";
+		$data["connName"] = "ampc_gen at 147.135.11.210";
 		$data["connStringType"] = "mysql";
-		$data["connectionString"] = "mysql;ampuertocortes.hn;ampc_palvarado;palvarado123*#;;ampc_gen;;1"; //currently unused
+		$data["connectionString"] = "mysql;147.135.11.210;ampc_palvarado;palvarado123*#;;ampc_gen;;1"; //currently unused
 
-		$this->_connectionsIdByName["ampc_gen at ampuertocortes.hn"] = "internas_new_at_localhost";
+		$this->_connectionsIdByName["ampc_gen at 147.135.11.210"] = "internas_new_at_localhost";
 
 		$data["connInfo"] = array();
 		$data["ODBCUID"] = "ampc_palvarado";
@@ -136,14 +136,14 @@ class ConnectionManager extends ConnectionManager_Base
 		$data["DBPath"] = "db"; //currently unused
 		$data["useServerMapPath"] = 1; //currently unused
 
-		$data["connInfo"][0] = "ampuertocortes.hn";
+		$data["connInfo"][0] = "147.135.11.210";
 		$data["connInfo"][1] = "ampc_palvarado";
 		$data["connInfo"][2] = "palvarado123*#";
 		$data["connInfo"][3] = "";
 		$data["connInfo"][4] = "ampc_gen";
 		$data["connInfo"][5] = ""; //currently unused
 		$data["connInfo"][6] = "1"; //currently unused
-		$data["ODBCString"] = "DRIVER={MySQL ODBC 3.51 Driver};Server=ampuertocortes.hn;Uid=ampc_palvarado;Pwd=palvarado123*#;Database=ampc_gen;OPTION=3";
+		$data["ODBCString"] = "DRIVER={MySQL ODBC 8.0 Unicode Driver};Server=147.135.11.210;Uid=ampc_palvarado;Pwd=palvarado123*#;Database=ampc_gen;OPTION=3";
 		// encription set
 		$data["EncryptInfo"] = array();
 		$data["EncryptInfo"]["mode"] = 0;
