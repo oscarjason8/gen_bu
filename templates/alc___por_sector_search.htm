@@ -1,0 +1,516 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel Alc___Por_Sector search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN id_distrito_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_distrito}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="id_distrito" 
+	
+	data-signal-error-for="id_distrito{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="id_distrito" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_id_distrito}">
+		{$label Alc___Por_Sector id_distrito }	</label>
+	<div class="r-search-option">
+		{$searchtype_id_distrito}
+	</div>
+	<div class="r-search-field">
+		{$id_distrito_editcontrol}	</div>
+	<div class="r-search-field">
+		{$id_distrito_editcontrol1}
+	</div>
+	
+</div>
+
+{END id_distrito_fieldblock}
+											
+{BEGIN id_sector_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_sector}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="id_sector" 
+	
+	data-signal-error-for="id_sector{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="id_sector" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_id_sector}">
+		{$label Alc___Por_Sector id_sector }	</label>
+	<div class="r-search-option">
+		{$searchtype_id_sector}
+	</div>
+	<div class="r-search-field">
+		{$id_sector_editcontrol}	</div>
+	<div class="r-search-field">
+		{$id_sector_editcontrol1}
+	</div>
+	
+</div>
+
+{END id_sector_fieldblock}
+											
+{BEGIN PAC_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PAC}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="PAC" 
+	
+	data-signal-error-for="PAC{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="PAC" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_PAC}">
+		{$label Alc___Por_Sector PAC }	</label>
+	<div class="r-search-option">
+		{$searchtype_PAC}
+	</div>
+	<div class="r-search-field">
+		{$PAC_editcontrol}	</div>
+	<div class="r-search-field">
+		{$PAC_editcontrol1}
+	</div>
+	
+</div>
+
+{END PAC_fieldblock}
+											
+{BEGIN FAPER_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FAPER}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="FAPER" 
+	
+	data-signal-error-for="FAPER{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="FAPER" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_FAPER}">
+		{$label Alc___Por_Sector FAPER }	</label>
+	<div class="r-search-option">
+		{$searchtype_FAPER}
+	</div>
+	<div class="r-search-field">
+		{$FAPER_editcontrol}	</div>
+	<div class="r-search-field">
+		{$FAPER_editcontrol1}
+	</div>
+	
+</div>
+
+{END FAPER_fieldblock}
+											
+{BEGIN NUEVA_RUTA_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_NUEVA_RUTA}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="NUEVA_RUTA" 
+	
+	data-signal-error-for="NUEVA_RUTA{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="NUEVA_RUTA" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_NUEVA_RUTA}">
+		{$label Alc___Por_Sector NUEVA_RUTA }	</label>
+	<div class="r-search-option">
+		{$searchtype_NUEVA_RUTA}
+	</div>
+	<div class="r-search-field">
+		{$NUEVA_RUTA_editcontrol}	</div>
+	<div class="r-search-field">
+		{$NUEVA_RUTA_editcontrol1}
+	</div>
+	
+</div>
+
+{END NUEVA_RUTA_fieldblock}
+											
+{BEGIN ALIANZA_PAT_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ALIANZA_PAT}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="ALIANZA_PAT" 
+	
+	data-signal-error-for="ALIANZA_PAT{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="ALIANZA_PAT" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_ALIANZA_PAT}">
+		{$label Alc___Por_Sector ALIANZA_PAT }	</label>
+	<div class="r-search-option">
+		{$searchtype_ALIANZA_PAT}
+	</div>
+	<div class="r-search-field">
+		{$ALIANZA_PAT_editcontrol}	</div>
+	<div class="r-search-field">
+		{$ALIANZA_PAT_editcontrol1}
+	</div>
+	
+</div>
+
+{END ALIANZA_PAT_fieldblock}
+											
+{BEGIN LIBRE_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LIBRE}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="LIBRE" 
+	
+	data-signal-error-for="LIBRE{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="LIBRE" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LIBRE}">
+		{$label Alc___Por_Sector LIBRE }	</label>
+	<div class="r-search-option">
+		{$searchtype_LIBRE}
+	</div>
+	<div class="r-search-field">
+		{$LIBRE_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LIBRE_editcontrol1}
+	</div>
+	
+</div>
+
+{END LIBRE_fieldblock}
+											
+{BEGIN PSH_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PSH}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="PSH" 
+	
+	data-signal-error-for="PSH{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="PSH" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_PSH}">
+		{$label Alc___Por_Sector PSH }	</label>
+	<div class="r-search-option">
+		{$searchtype_PSH}
+	</div>
+	<div class="r-search-field">
+		{$PSH_editcontrol}	</div>
+	<div class="r-search-field">
+		{$PSH_editcontrol1}
+	</div>
+	
+</div>
+
+{END PSH_fieldblock}
+											
+{BEGIN LIDEHR_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LIDEHR}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="LIDEHR" 
+	
+	data-signal-error-for="LIDEHR{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="LIDEHR" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LIDEHR}">
+		{$label Alc___Por_Sector LIDEHR }	</label>
+	<div class="r-search-option">
+		{$searchtype_LIDEHR}
+	</div>
+	<div class="r-search-field">
+		{$LIDEHR_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LIDEHR_editcontrol1}
+	</div>
+	
+</div>
+
+{END LIDEHR_fieldblock}
+											
+{BEGIN DC_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_DC}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="DC" 
+	
+	data-signal-error-for="DC{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="DC" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_DC}">
+		{$label Alc___Por_Sector DC }	</label>
+	<div class="r-search-option">
+		{$searchtype_DC}
+	</div>
+	<div class="r-search-field">
+		{$DC_editcontrol}	</div>
+	<div class="r-search-field">
+		{$DC_editcontrol1}
+	</div>
+	
+</div>
+
+{END DC_fieldblock}
+											
+{BEGIN TSH_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_TSH}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="TSH" 
+	
+	data-signal-error-for="TSH{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="TSH" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_TSH}">
+		{$label Alc___Por_Sector TSH }	</label>
+	<div class="r-search-option">
+		{$searchtype_TSH}
+	</div>
+	<div class="r-search-field">
+		{$TSH_editcontrol}	</div>
+	<div class="r-search-field">
+		{$TSH_editcontrol1}
+	</div>
+	
+</div>
+
+{END TSH_fieldblock}
+											
+{BEGIN LIBERAL_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LIBERAL}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="LIBERAL" 
+	
+	data-signal-error-for="LIBERAL{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="LIBERAL" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LIBERAL}">
+		{$label Alc___Por_Sector LIBERAL }	</label>
+	<div class="r-search-option">
+		{$searchtype_LIBERAL}
+	</div>
+	<div class="r-search-field">
+		{$LIBERAL_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LIBERAL_editcontrol1}
+	</div>
+	
+</div>
+
+{END LIBERAL_fieldblock}
+											
+{BEGIN NACIONAL_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_NACIONAL}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="NACIONAL" 
+	
+	data-signal-error-for="NACIONAL{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="NACIONAL" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_NACIONAL}">
+		{$label Alc___Por_Sector NACIONAL }	</label>
+	<div class="r-search-option">
+		{$searchtype_NACIONAL}
+	</div>
+	<div class="r-search-field">
+		{$NACIONAL_editcontrol}	</div>
+	<div class="r-search-field">
+		{$NACIONAL_editcontrol1}
+	</div>
+	
+</div>
+
+{END NACIONAL_fieldblock}
+											
+{BEGIN PINU_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PINU}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="PINU" 
+	
+	data-signal-error-for="PINU{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field13" {$item_integrated_search_field13} data-pageid="{$pageid}" data-field="PINU" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_PINU}">
+		{$label Alc___Por_Sector PINU }	</label>
+	<div class="r-search-option">
+		{$searchtype_PINU}
+	</div>
+	<div class="r-search-field">
+		{$PINU_editcontrol}	</div>
+	<div class="r-search-field">
+		{$PINU_editcontrol1}
+	</div>
+	
+</div>
+
+{END PINU_fieldblock}
+											
+{BEGIN Otros_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Otros}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="Otros" 
+	
+	data-signal-error-for="Otros{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field14" {$item_integrated_search_field14} data-pageid="{$pageid}" data-field="Otros" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Otros}">
+		{$label Alc___Por_Sector Otros }	</label>
+	<div class="r-search-option">
+		{$searchtype_Otros}
+	</div>
+	<div class="r-search-field">
+		{$Otros_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Otros_editcontrol1}
+	</div>
+	
+</div>
+
+{END Otros_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Buscar			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

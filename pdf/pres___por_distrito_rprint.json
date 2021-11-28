@@ -1,0 +1,722 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+						pagesummary: {
+		fillColor: '#ffffbb',
+	},
+	globalsummary: {
+		fillColor: '#ffe0b0',
+	},
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid}
+		{
+			text: '{$jscaption Pres___Por_Distrito}',
+		},
+		{END embedded_grid}
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0.1; },
+				vLineWidth: function(i, node) { 
+					if( node.table.embeddedPage ) {
+						return (i === 0 || i === node.table.widths.length) ? 0.1 : 0;
+					} else  {
+						return 0.1; 
+					}
+				},
+				hLineColor: function(i, node) { return 'gray'; },
+				vLineColor: function(i, node) { return 'gray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 0 + 1 {BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: 22,
+							border:[false, false,false,false],
+							stack: [
+
+																										
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"text":"{$jspagetitlelabel Pres___Por_Distrito rprint}","hidden":"{$item_hide_print_header}","fontSize":30},
+				
+				
+			{"text":"{$printtabheader_text}","hidden":"{$item_hide_print_subheader}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"Página %current% / %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																
+[	
+		{
+		text: '{$jslabel Pres___Por_Distrito id_distrito }',
+		alignment: '{$id_distrito_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito PAC }',
+		alignment: '{$PAC_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito FAPER }',
+		alignment: '{$FAPER_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito NUEVA_RUTA }',
+		alignment: '{$NUEVA_RUTA_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito ALIANZA_PAT }',
+		alignment: '{$ALIANZA_PAT_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito MIDE }',
+		alignment: '{$MIDE_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito VAMOS }',
+		alignment: '{$VAMOS_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito LIBRE }',
+		alignment: '{$LIBRE_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito PSH }',
+		alignment: '{$PSH_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito LIDEHR }',
+		alignment: '{$LIDEHR_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito UD }',
+		alignment: '{$UD_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito DC }',
+		alignment: '{$DC_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito TSH }',
+		alignment: '{$TSH_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito HON_HUMANA }',
+		alignment: '{$HON_HUMANA_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito LIBERAL }',
+		alignment: '{$LIBERAL_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito NACIONAL }',
+		alignment: '{$NACIONAL_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito Validos }',
+		alignment: '{$Validos_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito Blancos }',
+		alignment: '{$Blancos_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito Nulos }',
+		alignment: '{$Nulos_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito Utilizados }',
+		alignment: '{$Utilizados_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito No_Utilizados }',
+		alignment: '{$No_Utilizados_align}',
+	},
+		{
+		text: '{$jslabel Pres___Por_Distrito Total }',
+		alignment: '{$Total_align}',
+	},
+	],
+
+{BEGIN grid_row}
+	{BEGIN row_data}
+[	
+		{	
+		text: {$id_distrito_value},
+		alignment: '{$id_distrito_align}',
+	},
+		{	
+		text: {$PAC_value},
+		alignment: '{$PAC_align}',
+	},
+		{	
+		text: {$FAPER_value},
+		alignment: '{$FAPER_align}',
+	},
+		{	
+		text: {$NUEVA_RUTA_value},
+		alignment: '{$NUEVA_RUTA_align}',
+	},
+		{	
+		text: {$ALIANZA_PAT_value},
+		alignment: '{$ALIANZA_PAT_align}',
+	},
+		{	
+		text: {$MIDE_value},
+		alignment: '{$MIDE_align}',
+	},
+		{	
+		text: {$VAMOS_value},
+		alignment: '{$VAMOS_align}',
+	},
+		{	
+		text: {$LIBRE_value},
+		alignment: '{$LIBRE_align}',
+	},
+		{	
+		text: {$PSH_value},
+		alignment: '{$PSH_align}',
+	},
+		{	
+		text: {$LIDEHR_value},
+		alignment: '{$LIDEHR_align}',
+	},
+		{	
+		text: {$UD_value},
+		alignment: '{$UD_align}',
+	},
+		{	
+		text: {$DC_value},
+		alignment: '{$DC_align}',
+	},
+		{	
+		text: {$TSH_value},
+		alignment: '{$TSH_align}',
+	},
+		{	
+		text: {$HON_HUMANA_value},
+		alignment: '{$HON_HUMANA_align}',
+	},
+		{	
+		text: {$LIBERAL_value},
+		alignment: '{$LIBERAL_align}',
+	},
+		{	
+		text: {$NACIONAL_value},
+		alignment: '{$NACIONAL_align}',
+	},
+		{	
+		text: {$Validos_value},
+		alignment: '{$Validos_align}',
+	},
+		{	
+		text: {$Blancos_value},
+		alignment: '{$Blancos_align}',
+	},
+		{	
+		text: {$Nulos_value},
+		alignment: '{$Nulos_align}',
+	},
+		{	
+		text: {$Utilizados_value},
+		alignment: '{$Utilizados_align}',
+	},
+		{	
+		text: {$No_Utilizados_value},
+		alignment: '{$No_Utilizados_align}',
+	},
+		{	
+		text: {$Total_value},
+		alignment: '{$Total_align}',
+	},
+	],
+	{END row_data}
+{END grid_row}
+
+[
+		{	
+		text: '{$jslabel Pres___Por_Distrito id_distrito }',
+		alignment: '{$id_distrito_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito PAC }',
+		alignment: '{$PAC_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito FAPER }',
+		alignment: '{$FAPER_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito NUEVA_RUTA }',
+		alignment: '{$NUEVA_RUTA_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito ALIANZA_PAT }',
+		alignment: '{$ALIANZA_PAT_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito MIDE }',
+		alignment: '{$MIDE_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito VAMOS }',
+		alignment: '{$VAMOS_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito LIBRE }',
+		alignment: '{$LIBRE_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito PSH }',
+		alignment: '{$PSH_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito LIDEHR }',
+		alignment: '{$LIDEHR_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito UD }',
+		alignment: '{$UD_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito DC }',
+		alignment: '{$DC_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito TSH }',
+		alignment: '{$TSH_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito HON_HUMANA }',
+		alignment: '{$HON_HUMANA_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito LIBERAL }',
+		alignment: '{$LIBERAL_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito NACIONAL }',
+		alignment: '{$NACIONAL_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito Validos }',
+		alignment: '{$Validos_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito Blancos }',
+		alignment: '{$Blancos_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito Nulos }',
+		alignment: '{$Nulos_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito Utilizados }',
+		alignment: '{$Utilizados_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito No_Utilizados }',
+		alignment: '{$No_Utilizados_align}',
+	},
+		{	
+		text: '{$jslabel Pres___Por_Distrito Total }',
+		alignment: '{$Total_align}',
+	},
+	],
+
+
+
+
+
+
+
+
+
+
+{BEGIN global_summary}
+	[
+		{
+			text: 'Resumen global {$global_total_cnt} - Registros totales',
+			colSpan: 22,
+			style: 'globalsummary',
+		}
+	],
+
+		[
+							{
+			text: [
+							'Sum ',
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							{$global_totalPAC_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$PAC_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalFAPER_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$FAPER_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalNUEVA_RUTA_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$NUEVA_RUTA_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalALIANZA_PAT_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$ALIANZA_PAT_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalMIDE_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$MIDE_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalVAMOS_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$VAMOS_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalLIBRE_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$LIBRE_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalPSH_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$PSH_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalLIDEHR_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$LIDEHR_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalUD_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$UD_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalDC_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$DC_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalTSH_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$TSH_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalHON_HUMANA_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$HON_HUMANA_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalLIBERAL_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$LIBERAL_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalNACIONAL_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$NACIONAL_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalValidos_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$Validos_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalBlancos_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$Blancos_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalNulos_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$Nulos_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalUtilizados_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$Utilizados_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalNo_Utilizados_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$No_Utilizados_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalTotal_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$Total_align}',
+					},
+			],
+	
+	
+	
+	
+{END global_summary}
+									]
+			
+			}
+		},
+		{END body}
+	]
+}
