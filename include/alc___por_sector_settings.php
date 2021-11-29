@@ -85,9 +85,6 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsalc___por_sector["Spanish"]["PINU"] = "PINU";
 	$fieldToolTipsalc___por_sector["Spanish"]["PINU"] = "";
 	$placeHoldersalc___por_sector["Spanish"]["PINU"] = "";
-	$fieldLabelsalc___por_sector["Spanish"]["Otros"] = "Otros";
-	$fieldToolTipsalc___por_sector["Spanish"]["Otros"] = "";
-	$placeHoldersalc___por_sector["Spanish"]["Otros"] = "";
 	if (count($fieldToolTipsalc___por_sector["Spanish"]))
 		$tdataalc___por_sector[".isUseToolTips"] = true;
 }
@@ -225,7 +222,6 @@ $tdataalc___por_sector[".googleLikeFields"][] = "TSH";
 $tdataalc___por_sector[".googleLikeFields"][] = "LIBERAL";
 $tdataalc___por_sector[".googleLikeFields"][] = "NACIONAL";
 $tdataalc___por_sector[".googleLikeFields"][] = "PINU";
-$tdataalc___por_sector[".googleLikeFields"][] = "Otros";
 $tdataalc___por_sector[".googleLikeFields"][] = "Validos";
 $tdataalc___por_sector[".googleLikeFields"][] = "Blancos";
 $tdataalc___por_sector[".googleLikeFields"][] = "Nulos";
@@ -287,7 +283,7 @@ $tdataalc___por_sector[".orderindexes"] = array();
 
 
 
-$tdataalc___por_sector[".sqlHead"] = "select ur.id_distrito, ur.id_sector,  (select concat(sum(a.candidato1), \" (\", ROUND(((((sum(a.candidato1)/(sum(validos)))))*100),1), \"%)\")   from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as PAC,  (select concat(sum(a.candidato2), \" (\", ROUND((((sum(a.candidato2)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as FAPER,  (select concat(sum(a.candidato3), \" (\", ROUND((((sum(a.candidato3)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as NUEVA_RUTA,  (select concat(sum(a.candidato4), \" (\", ROUND((((sum(a.candidato4)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as ALIANZA_PAT,  (select concat(sum(a.candidato5), \" (\", ROUND((((sum(a.candidato5)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as LIBRE,  (select concat(sum(a.candidato6), \" (\", ROUND((((sum(a.candidato6)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as PSH,  (select concat(sum(a.candidato7), \" (\", ROUND((((sum(a.candidato7)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as LIDEHR,  (select concat(sum(a.candidato8), \" (\", ROUND((((sum(a.candidato8)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as DC,  (select concat(sum(a.candidato9), \" (\", ROUND((((sum(a.candidato9)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as TSH,  (select concat(sum(a.candidato10), \" (\", ROUND((((sum(a.candidato10)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as LIBERAL,  (select concat(sum(a.candidato11), \" (\", ROUND((((sum(a.candidato11)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as NACIONAL,  (select concat(sum(a.candidato12), \" (\", ROUND((((sum(a.candidato12)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as PINU,  (select concat(((sum(p.candidato1)) + (sum(p.candidato2)) + (sum(p.candidato3)) + (sum(p.candidato4)) + (sum(p.candidato5)) + (sum(p.candidato6)) + (sum(p.candidato8))   + (sum(p.candidato9)) + (sum(p.candidato12))), \" (\", ROUND((((((sum(p.candidato1)) + (sum(p.candidato2)) + (sum(p.candidato3)) + (sum(p.candidato4)) + (sum(p.candidato5)) + (sum(p.candidato6)) + (sum(p.candidato8))   + (sum(p.candidato9)) + (sum(p.candidato12))) / (sum(validos))))*100),1), \"%)\")  from voto_presidente as p  inner join urna as u on p.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Otros,  (select sum(a.validos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Validos,  (select sum(a.blancos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Blancos,  (select sum(a.nulos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Nulos,  (select sum(a.utilizados) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Utilizados,  (select sum(a.no_utilizados) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as No_Utilizados,  (select sum(a.total) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Total";
+$tdataalc___por_sector[".sqlHead"] = "select ur.id_distrito, ur.id_sector,  (select concat(sum(a.candidato1), \" (\", ROUND(((((sum(a.candidato1)/(sum(validos)))))*100),1), \"%)\")   from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as PAC,  (select concat(sum(a.candidato2), \" (\", ROUND((((sum(a.candidato2)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as FAPER,  (select concat(sum(a.candidato3), \" (\", ROUND((((sum(a.candidato3)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as NUEVA_RUTA,  (select concat(sum(a.candidato4), \" (\", ROUND((((sum(a.candidato4)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as ALIANZA_PAT,  (select concat(sum(a.candidato5), \" (\", ROUND((((sum(a.candidato5)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as LIBRE,  (select concat(sum(a.candidato6), \" (\", ROUND((((sum(a.candidato6)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as PSH,  (select concat(sum(a.candidato7), \" (\", ROUND((((sum(a.candidato7)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as LIDEHR,  (select concat(sum(a.candidato8), \" (\", ROUND((((sum(a.candidato8)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as DC,  (select concat(sum(a.candidato9), \" (\", ROUND((((sum(a.candidato9)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as TSH,  (select concat(sum(a.candidato10), \" (\", ROUND((((sum(a.candidato10)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as LIBERAL,  (select concat(sum(a.candidato11), \" (\", ROUND((((sum(a.candidato11)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as NACIONAL,  (select concat(sum(a.candidato12), \" (\", ROUND((((sum(a.candidato12)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as PINU,  (select sum(a.validos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Validos,  (select sum(a.blancos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Blancos,  (select sum(a.nulos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Nulos,  (select sum(a.utilizados) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Utilizados,  (select sum(a.no_utilizados) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as No_Utilizados,  (select sum(a.total) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Total";
 $tdataalc___por_sector[".sqlFrom"] = "from voto_alcalde as va  inner join urna as ur on va.id_urna = ur.id_urna";
 $tdataalc___por_sector[".sqlWhereExpr"] = "";
 $tdataalc___por_sector[".sqlTail"] = "";
@@ -2340,149 +2336,10 @@ $tdataalc___por_sector[".hideMobileList"] = array();
 
 	$tdataalc___por_sector["PINU"] = $fdata;
 		$tdataalc___por_sector[".searchableFields"][] = "PINU";
-//	Otros
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 15;
-	$fdata["strName"] = "Otros";
-	$fdata["GoodName"] = "Otros";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Alc___Por_Sector","Otros");
-	$fdata["FieldType"] = 200;
-
-		// report field settings
-					$fdata["isTotalSum"] = true;
-	// end of report field settings
-
-	
-	
-			
-
-		$fdata["strField"] = "Otros";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "(select concat(((sum(p.candidato1)) + (sum(p.candidato2)) + (sum(p.candidato3)) + (sum(p.candidato4)) + (sum(p.candidato5)) + (sum(p.candidato6)) + (sum(p.candidato8))   + (sum(p.candidato9)) + (sum(p.candidato12))), \" (\", ROUND((((((sum(p.candidato1)) + (sum(p.candidato2)) + (sum(p.candidato3)) + (sum(p.candidato4)) + (sum(p.candidato5)) + (sum(p.candidato6)) + (sum(p.candidato8))   + (sum(p.candidato9)) + (sum(p.candidato12))) / (sum(validos))))*100),1), \"%)\")  from voto_presidente as p  inner join urna as u on p.id_urna = u.id_urna where u.id_sector = ur.id_sector)";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["report"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-	//	End validation
-
-	
-	
-	
-	
-	
-	$fdata["EditFormats"]["search"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataalc___por_sector["Otros"] = $fdata;
-		$tdataalc___por_sector[".searchableFields"][] = "Otros";
 //	Validos
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 16;
+	$fdata["Index"] = 15;
 	$fdata["strName"] = "Validos";
 	$fdata["GoodName"] = "Validos";
 	$fdata["ownerTable"] = "";
@@ -2625,7 +2482,7 @@ $tdataalc___por_sector[".hideMobileList"] = array();
 //	Blancos
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 17;
+	$fdata["Index"] = 16;
 	$fdata["strName"] = "Blancos";
 	$fdata["GoodName"] = "Blancos";
 	$fdata["ownerTable"] = "";
@@ -2768,7 +2625,7 @@ $tdataalc___por_sector[".hideMobileList"] = array();
 //	Nulos
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 18;
+	$fdata["Index"] = 17;
 	$fdata["strName"] = "Nulos";
 	$fdata["GoodName"] = "Nulos";
 	$fdata["ownerTable"] = "";
@@ -2911,7 +2768,7 @@ $tdataalc___por_sector[".hideMobileList"] = array();
 //	Utilizados
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 19;
+	$fdata["Index"] = 18;
 	$fdata["strName"] = "Utilizados";
 	$fdata["GoodName"] = "Utilizados";
 	$fdata["ownerTable"] = "";
@@ -3054,7 +2911,7 @@ $tdataalc___por_sector[".hideMobileList"] = array();
 //	No_Utilizados
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 20;
+	$fdata["Index"] = 19;
 	$fdata["strName"] = "No_Utilizados";
 	$fdata["GoodName"] = "No_Utilizados";
 	$fdata["ownerTable"] = "";
@@ -3197,7 +3054,7 @@ $tdataalc___por_sector[".hideMobileList"] = array();
 //	Total
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 21;
+	$fdata["Index"] = 20;
 	$fdata["strName"] = "Total";
 	$fdata["GoodName"] = "Total";
 	$fdata["ownerTable"] = "";
@@ -3374,7 +3231,7 @@ function createSqlQuery_alc___por_sector()
 {
 $proto0=array();
 $proto0["m_strHead"] = "select";
-$proto0["m_strFieldList"] = "ur.id_distrito, ur.id_sector,  (select concat(sum(a.candidato1), \" (\", ROUND(((((sum(a.candidato1)/(sum(validos)))))*100),1), \"%)\")   from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as PAC,  (select concat(sum(a.candidato2), \" (\", ROUND((((sum(a.candidato2)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as FAPER,  (select concat(sum(a.candidato3), \" (\", ROUND((((sum(a.candidato3)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as NUEVA_RUTA,  (select concat(sum(a.candidato4), \" (\", ROUND((((sum(a.candidato4)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as ALIANZA_PAT,  (select concat(sum(a.candidato5), \" (\", ROUND((((sum(a.candidato5)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as LIBRE,  (select concat(sum(a.candidato6), \" (\", ROUND((((sum(a.candidato6)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as PSH,  (select concat(sum(a.candidato7), \" (\", ROUND((((sum(a.candidato7)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as LIDEHR,  (select concat(sum(a.candidato8), \" (\", ROUND((((sum(a.candidato8)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as DC,  (select concat(sum(a.candidato9), \" (\", ROUND((((sum(a.candidato9)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as TSH,  (select concat(sum(a.candidato10), \" (\", ROUND((((sum(a.candidato10)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as LIBERAL,  (select concat(sum(a.candidato11), \" (\", ROUND((((sum(a.candidato11)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as NACIONAL,  (select concat(sum(a.candidato12), \" (\", ROUND((((sum(a.candidato12)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as PINU,  (select concat(((sum(p.candidato1)) + (sum(p.candidato2)) + (sum(p.candidato3)) + (sum(p.candidato4)) + (sum(p.candidato5)) + (sum(p.candidato6)) + (sum(p.candidato8))   + (sum(p.candidato9)) + (sum(p.candidato12))), \" (\", ROUND((((((sum(p.candidato1)) + (sum(p.candidato2)) + (sum(p.candidato3)) + (sum(p.candidato4)) + (sum(p.candidato5)) + (sum(p.candidato6)) + (sum(p.candidato8))   + (sum(p.candidato9)) + (sum(p.candidato12))) / (sum(validos))))*100),1), \"%)\")  from voto_presidente as p  inner join urna as u on p.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Otros,  (select sum(a.validos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Validos,  (select sum(a.blancos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Blancos,  (select sum(a.nulos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Nulos,  (select sum(a.utilizados) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Utilizados,  (select sum(a.no_utilizados) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as No_Utilizados,  (select sum(a.total) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Total";
+$proto0["m_strFieldList"] = "ur.id_distrito, ur.id_sector,  (select concat(sum(a.candidato1), \" (\", ROUND(((((sum(a.candidato1)/(sum(validos)))))*100),1), \"%)\")   from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as PAC,  (select concat(sum(a.candidato2), \" (\", ROUND((((sum(a.candidato2)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as FAPER,  (select concat(sum(a.candidato3), \" (\", ROUND((((sum(a.candidato3)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as NUEVA_RUTA,  (select concat(sum(a.candidato4), \" (\", ROUND((((sum(a.candidato4)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as ALIANZA_PAT,  (select concat(sum(a.candidato5), \" (\", ROUND((((sum(a.candidato5)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as LIBRE,  (select concat(sum(a.candidato6), \" (\", ROUND((((sum(a.candidato6)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as PSH,  (select concat(sum(a.candidato7), \" (\", ROUND((((sum(a.candidato7)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as LIDEHR,  (select concat(sum(a.candidato8), \" (\", ROUND((((sum(a.candidato8)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as DC,  (select concat(sum(a.candidato9), \" (\", ROUND((((sum(a.candidato9)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as TSH,  (select concat(sum(a.candidato10), \" (\", ROUND((((sum(a.candidato10)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as LIBERAL,  (select concat(sum(a.candidato11), \" (\", ROUND((((sum(a.candidato11)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as NACIONAL,  (select concat(sum(a.candidato12), \" (\", ROUND((((sum(a.candidato12)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as PINU,  (select sum(a.validos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Validos,  (select sum(a.blancos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Blancos,  (select sum(a.nulos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Nulos,  (select sum(a.utilizados) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Utilizados,  (select sum(a.no_utilizados) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as No_Utilizados,  (select sum(a.total) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Total";
 $proto0["m_strFrom"] = "from voto_alcalde as va  inner join urna as ur on va.id_urna = ur.id_urna";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "order by ur.id_sector";
@@ -5677,8 +5534,8 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto262=array();
 			$proto263=array();
 $proto263["m_strHead"] = "select";
-$proto263["m_strFieldList"] = "concat(((sum(p.candidato1)) + (sum(p.candidato2)) + (sum(p.candidato3)) + (sum(p.candidato4)) + (sum(p.candidato5)) + (sum(p.candidato6)) + (sum(p.candidato8))   + (sum(p.candidato9)) + (sum(p.candidato12))), \" (\", ROUND((((((sum(p.candidato1)) + (sum(p.candidato2)) + (sum(p.candidato3)) + (sum(p.candidato4)) + (sum(p.candidato5)) + (sum(p.candidato6)) + (sum(p.candidato8))   + (sum(p.candidato9)) + (sum(p.candidato12))) / (sum(validos))))*100),1), \"%)\")";
-$proto263["m_strFrom"] = "from voto_presidente as p  inner join urna as u on p.id_urna = u.id_urna";
+$proto263["m_strFieldList"] = "sum(a.validos)";
+$proto263["m_strFrom"] = "from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna";
 $proto263["m_strWhere"] = "u.id_sector = ur.id_sector";
 $proto263["m_strOrderBy"] = "";
 	
@@ -5721,32 +5578,19 @@ $proto263["m_having"] = $obj;
 $proto263["m_fieldlist"] = array();
 						$proto269=array();
 			$proto270=array();
-$proto270["m_functiontype"] = "SQLF_CUSTOM";
+$proto270["m_functiontype"] = "SQLF_SUM";
 $proto270["m_arguments"] = array();
-						$obj = new SQLNonParsed(array(
-	"m_sql" => "((sum(p.candidato1)) + (sum(p.candidato2)) + (sum(p.candidato3)) + (sum(p.candidato4)) + (sum(p.candidato5)) + (sum(p.candidato6)) + (sum(p.candidato8))   + (sum(p.candidato9)) + (sum(p.candidato12)))"
+						$obj = new SQLField(array(
+	"m_strName" => "validos",
+	"m_strTable" => "a",
+	"m_srcTableName" => "Alc - Por Sector"
 ));
 
 $proto270["m_arguments"][]=$obj;
-						$obj = new SQLNonParsed(array(
-	"m_sql" => "\" (\""
-));
-
-$proto270["m_arguments"][]=$obj;
-						$obj = new SQLNonParsed(array(
-	"m_sql" => "ROUND((((((sum(p.candidato1)) + (sum(p.candidato2)) + (sum(p.candidato3)) + (sum(p.candidato4)) + (sum(p.candidato5)) + (sum(p.candidato6)) + (sum(p.candidato8))   + (sum(p.candidato9)) + (sum(p.candidato12))) / (sum(validos))))*100),1)"
-));
-
-$proto270["m_arguments"][]=$obj;
-						$obj = new SQLNonParsed(array(
-	"m_sql" => "\"%)\""
-));
-
-$proto270["m_arguments"][]=$obj;
-$proto270["m_strFunctionName"] = "concat";
+$proto270["m_strFunctionName"] = "sum";
 $obj = new SQLFunctionCall($proto270);
 
-$proto269["m_sql"] = "concat(((sum(p.candidato1)) + (sum(p.candidato2)) + (sum(p.candidato3)) + (sum(p.candidato4)) + (sum(p.candidato5)) + (sum(p.candidato6)) + (sum(p.candidato8))   + (sum(p.candidato9)) + (sum(p.candidato12))), \" (\", ROUND((((((sum(p.candidato1)) + (sum(p.candidato2)) + (sum(p.candidato3)) + (sum(p.candidato4)) + (sum(p.candidato5)) + (sum(p.candidato6)) + (sum(p.candidato8))   + (sum(p.candidato9)) + (sum(p.candidato12))) / (sum(validos))))*100),1), \"%)\")";
+$proto269["m_sql"] = "sum(a.validos)";
 $proto269["m_srcTableName"] = "Alc - Por Sector";
 $proto269["m_expr"]=$obj;
 $proto269["m_alias"] = "";
@@ -5754,101 +5598,98 @@ $obj = new SQLFieldListItem($proto269);
 
 $proto263["m_fieldlist"][]=$obj;
 $proto263["m_fromlist"] = array();
-												$proto275=array();
-$proto275["m_link"] = "SQLL_MAIN";
-			$proto276=array();
-$proto276["m_strName"] = "voto_presidente";
-$proto276["m_srcTableName"] = "Alc - Por Sector";
-$proto276["m_columns"] = array();
-$proto276["m_columns"][] = "elecciones";
-$proto276["m_columns"][] = "id_urna";
-$proto276["m_columns"][] = "candidato1";
-$proto276["m_columns"][] = "candidato2";
-$proto276["m_columns"][] = "candidato3";
-$proto276["m_columns"][] = "candidato4";
-$proto276["m_columns"][] = "candidato5";
-$proto276["m_columns"][] = "candidato6";
-$proto276["m_columns"][] = "candidato7";
-$proto276["m_columns"][] = "candidato8";
-$proto276["m_columns"][] = "candidato9";
-$proto276["m_columns"][] = "candidato10";
-$proto276["m_columns"][] = "candidato11";
-$proto276["m_columns"][] = "candidato12";
-$proto276["m_columns"][] = "candidato13";
-$proto276["m_columns"][] = "candidato14";
-$proto276["m_columns"][] = "candidato15";
-$proto276["m_columns"][] = "validos";
-$proto276["m_columns"][] = "blancos";
-$proto276["m_columns"][] = "nulos";
-$proto276["m_columns"][] = "utilizados";
-$proto276["m_columns"][] = "no_utilizados";
-$proto276["m_columns"][] = "total";
-$proto276["m_columns"][] = "usuario";
-$proto276["m_columns"][] = "fecha";
-$proto276["m_columns"][] = "editado_por";
-$proto276["m_columns"][] = "fecha_edicion";
-$obj = new SQLTable($proto276);
+												$proto272=array();
+$proto272["m_link"] = "SQLL_MAIN";
+			$proto273=array();
+$proto273["m_strName"] = "voto_alcalde";
+$proto273["m_srcTableName"] = "Alc - Por Sector";
+$proto273["m_columns"] = array();
+$proto273["m_columns"][] = "elecciones";
+$proto273["m_columns"][] = "id_urna";
+$proto273["m_columns"][] = "candidato1";
+$proto273["m_columns"][] = "candidato2";
+$proto273["m_columns"][] = "candidato3";
+$proto273["m_columns"][] = "candidato4";
+$proto273["m_columns"][] = "candidato5";
+$proto273["m_columns"][] = "candidato6";
+$proto273["m_columns"][] = "candidato7";
+$proto273["m_columns"][] = "candidato8";
+$proto273["m_columns"][] = "candidato9";
+$proto273["m_columns"][] = "candidato10";
+$proto273["m_columns"][] = "candidato11";
+$proto273["m_columns"][] = "candidato12";
+$proto273["m_columns"][] = "validos";
+$proto273["m_columns"][] = "blancos";
+$proto273["m_columns"][] = "nulos";
+$proto273["m_columns"][] = "utilizados";
+$proto273["m_columns"][] = "no_utilizados";
+$proto273["m_columns"][] = "total";
+$proto273["m_columns"][] = "usuario";
+$proto273["m_columns"][] = "fecha";
+$proto273["m_columns"][] = "editado_por";
+$proto273["m_columns"][] = "fecha_edicion";
+$obj = new SQLTable($proto273);
 
-$proto275["m_table"] = $obj;
-$proto275["m_sql"] = "voto_presidente as p";
-$proto275["m_alias"] = "p";
-$proto275["m_srcTableName"] = "Alc - Por Sector";
-$proto277=array();
-$proto277["m_sql"] = "";
-$proto277["m_uniontype"] = "SQLL_UNKNOWN";
+$proto272["m_table"] = $obj;
+$proto272["m_sql"] = "voto_alcalde as a";
+$proto272["m_alias"] = "a";
+$proto272["m_srcTableName"] = "Alc - Por Sector";
+$proto274=array();
+$proto274["m_sql"] = "";
+$proto274["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto277["m_column"]=$obj;
-$proto277["m_contained"] = array();
-$proto277["m_strCase"] = "";
-$proto277["m_havingmode"] = false;
-$proto277["m_inBrackets"] = false;
-$proto277["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto277);
+$proto274["m_column"]=$obj;
+$proto274["m_contained"] = array();
+$proto274["m_strCase"] = "";
+$proto274["m_havingmode"] = false;
+$proto274["m_inBrackets"] = false;
+$proto274["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto274);
 
-$proto275["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto275);
+$proto272["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto272);
 
 $proto263["m_fromlist"][]=$obj;
-												$proto279=array();
-$proto279["m_link"] = "SQLL_INNERJOIN";
-			$proto280=array();
-$proto280["m_strName"] = "urna";
-$proto280["m_srcTableName"] = "Alc - Por Sector";
-$proto280["m_columns"] = array();
-$proto280["m_columns"][] = "id_distrito";
-$proto280["m_columns"][] = "id_sector";
-$proto280["m_columns"][] = "id_urna";
-$proto280["m_columns"][] = "nombre_centro";
-$proto280["m_columns"][] = "ubicación";
-$proto280["m_columns"][] = "votantes";
-$obj = new SQLTable($proto280);
+												$proto276=array();
+$proto276["m_link"] = "SQLL_INNERJOIN";
+			$proto277=array();
+$proto277["m_strName"] = "urna";
+$proto277["m_srcTableName"] = "Alc - Por Sector";
+$proto277["m_columns"] = array();
+$proto277["m_columns"][] = "id_distrito";
+$proto277["m_columns"][] = "id_sector";
+$proto277["m_columns"][] = "id_urna";
+$proto277["m_columns"][] = "nombre_centro";
+$proto277["m_columns"][] = "ubicación";
+$proto277["m_columns"][] = "votantes";
+$obj = new SQLTable($proto277);
 
-$proto279["m_table"] = $obj;
-$proto279["m_sql"] = "inner join urna as u on p.id_urna = u.id_urna";
-$proto279["m_alias"] = "u";
-$proto279["m_srcTableName"] = "Alc - Por Sector";
-$proto281=array();
-$proto281["m_sql"] = "p.id_urna = u.id_urna";
-$proto281["m_uniontype"] = "SQLL_UNKNOWN";
+$proto276["m_table"] = $obj;
+$proto276["m_sql"] = "inner join urna as u on a.id_urna = u.id_urna";
+$proto276["m_alias"] = "u";
+$proto276["m_srcTableName"] = "Alc - Por Sector";
+$proto278=array();
+$proto278["m_sql"] = "a.id_urna = u.id_urna";
+$proto278["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "id_urna",
-	"m_strTable" => "p",
+	"m_strTable" => "a",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto281["m_column"]=$obj;
-$proto281["m_contained"] = array();
-$proto281["m_strCase"] = "= u.id_urna";
-$proto281["m_havingmode"] = false;
-$proto281["m_inBrackets"] = false;
-$proto281["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto281);
+$proto278["m_column"]=$obj;
+$proto278["m_contained"] = array();
+$proto278["m_strCase"] = "= u.id_urna";
+$proto278["m_havingmode"] = false;
+$proto278["m_inBrackets"] = false;
+$proto278["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto278);
 
-$proto279["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto279);
+$proto276["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto276);
 
 $proto263["m_fromlist"][]=$obj;
 $proto263["m_groupby"] = array();
@@ -5856,1170 +5697,997 @@ $proto263["m_orderby"] = array();
 $proto263["m_srcTableName"]="Alc - Por Sector";		
 $obj = new SQLQuery($proto263);
 
-$proto262["m_sql"] = "(select concat(((sum(p.candidato1)) + (sum(p.candidato2)) + (sum(p.candidato3)) + (sum(p.candidato4)) + (sum(p.candidato5)) + (sum(p.candidato6)) + (sum(p.candidato8))   + (sum(p.candidato9)) + (sum(p.candidato12))), \" (\", ROUND((((((sum(p.candidato1)) + (sum(p.candidato2)) + (sum(p.candidato3)) + (sum(p.candidato4)) + (sum(p.candidato5)) + (sum(p.candidato6)) + (sum(p.candidato8))   + (sum(p.candidato9)) + (sum(p.candidato12))) / (sum(validos))))*100),1), \"%)\")  from voto_presidente as p  inner join urna as u on p.id_urna = u.id_urna where u.id_sector = ur.id_sector)";
+$proto262["m_sql"] = "(select sum(a.validos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector)";
 $proto262["m_srcTableName"] = "Alc - Por Sector";
 $proto262["m_expr"]=$obj;
-$proto262["m_alias"] = "Otros";
+$proto262["m_alias"] = "Validos";
 $obj = new SQLFieldListItem($proto262);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto283=array();
-			$proto284=array();
-$proto284["m_strHead"] = "select";
-$proto284["m_strFieldList"] = "sum(a.validos)";
-$proto284["m_strFrom"] = "from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna";
-$proto284["m_strWhere"] = "u.id_sector = ur.id_sector";
-$proto284["m_strOrderBy"] = "";
+						$proto280=array();
+			$proto281=array();
+$proto281["m_strHead"] = "select";
+$proto281["m_strFieldList"] = "sum(a.blancos)";
+$proto281["m_strFrom"] = "from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna";
+$proto281["m_strWhere"] = "u.id_sector = ur.id_sector";
+$proto281["m_strOrderBy"] = "";
 	
 		;
-			$proto284["cipherer"] = null;
-$proto286=array();
-$proto286["m_sql"] = "u.id_sector = ur.id_sector";
-$proto286["m_uniontype"] = "SQLL_UNKNOWN";
+			$proto281["cipherer"] = null;
+$proto283=array();
+$proto283["m_sql"] = "u.id_sector = ur.id_sector";
+$proto283["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "id_sector",
 	"m_strTable" => "u",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto286["m_column"]=$obj;
-$proto286["m_contained"] = array();
-$proto286["m_strCase"] = "= ur.id_sector";
-$proto286["m_havingmode"] = false;
-$proto286["m_inBrackets"] = false;
-$proto286["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto286);
+$proto283["m_column"]=$obj;
+$proto283["m_contained"] = array();
+$proto283["m_strCase"] = "= ur.id_sector";
+$proto283["m_havingmode"] = false;
+$proto283["m_inBrackets"] = false;
+$proto283["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto283);
 
-$proto284["m_where"] = $obj;
-$proto288=array();
-$proto288["m_sql"] = "";
-$proto288["m_uniontype"] = "SQLL_UNKNOWN";
+$proto281["m_where"] = $obj;
+$proto285=array();
+$proto285["m_sql"] = "";
+$proto285["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto288["m_column"]=$obj;
-$proto288["m_contained"] = array();
-$proto288["m_strCase"] = "";
-$proto288["m_havingmode"] = false;
-$proto288["m_inBrackets"] = false;
-$proto288["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto288);
+$proto285["m_column"]=$obj;
+$proto285["m_contained"] = array();
+$proto285["m_strCase"] = "";
+$proto285["m_havingmode"] = false;
+$proto285["m_inBrackets"] = false;
+$proto285["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto285);
 
-$proto284["m_having"] = $obj;
-$proto284["m_fieldlist"] = array();
-						$proto290=array();
-			$proto291=array();
-$proto291["m_functiontype"] = "SQLF_SUM";
-$proto291["m_arguments"] = array();
-						$obj = new SQLField(array(
-	"m_strName" => "validos",
-	"m_strTable" => "a",
-	"m_srcTableName" => "Alc - Por Sector"
-));
-
-$proto291["m_arguments"][]=$obj;
-$proto291["m_strFunctionName"] = "sum";
-$obj = new SQLFunctionCall($proto291);
-
-$proto290["m_sql"] = "sum(a.validos)";
-$proto290["m_srcTableName"] = "Alc - Por Sector";
-$proto290["m_expr"]=$obj;
-$proto290["m_alias"] = "";
-$obj = new SQLFieldListItem($proto290);
-
-$proto284["m_fieldlist"][]=$obj;
-$proto284["m_fromlist"] = array();
-												$proto293=array();
-$proto293["m_link"] = "SQLL_MAIN";
-			$proto294=array();
-$proto294["m_strName"] = "voto_alcalde";
-$proto294["m_srcTableName"] = "Alc - Por Sector";
-$proto294["m_columns"] = array();
-$proto294["m_columns"][] = "elecciones";
-$proto294["m_columns"][] = "id_urna";
-$proto294["m_columns"][] = "candidato1";
-$proto294["m_columns"][] = "candidato2";
-$proto294["m_columns"][] = "candidato3";
-$proto294["m_columns"][] = "candidato4";
-$proto294["m_columns"][] = "candidato5";
-$proto294["m_columns"][] = "candidato6";
-$proto294["m_columns"][] = "candidato7";
-$proto294["m_columns"][] = "candidato8";
-$proto294["m_columns"][] = "candidato9";
-$proto294["m_columns"][] = "candidato10";
-$proto294["m_columns"][] = "candidato11";
-$proto294["m_columns"][] = "candidato12";
-$proto294["m_columns"][] = "validos";
-$proto294["m_columns"][] = "blancos";
-$proto294["m_columns"][] = "nulos";
-$proto294["m_columns"][] = "utilizados";
-$proto294["m_columns"][] = "no_utilizados";
-$proto294["m_columns"][] = "total";
-$proto294["m_columns"][] = "usuario";
-$proto294["m_columns"][] = "fecha";
-$proto294["m_columns"][] = "editado_por";
-$proto294["m_columns"][] = "fecha_edicion";
-$obj = new SQLTable($proto294);
-
-$proto293["m_table"] = $obj;
-$proto293["m_sql"] = "voto_alcalde as a";
-$proto293["m_alias"] = "a";
-$proto293["m_srcTableName"] = "Alc - Por Sector";
-$proto295=array();
-$proto295["m_sql"] = "";
-$proto295["m_uniontype"] = "SQLL_UNKNOWN";
-	$obj = new SQLNonParsed(array(
-	"m_sql" => ""
-));
-
-$proto295["m_column"]=$obj;
-$proto295["m_contained"] = array();
-$proto295["m_strCase"] = "";
-$proto295["m_havingmode"] = false;
-$proto295["m_inBrackets"] = false;
-$proto295["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto295);
-
-$proto293["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto293);
-
-$proto284["m_fromlist"][]=$obj;
-												$proto297=array();
-$proto297["m_link"] = "SQLL_INNERJOIN";
-			$proto298=array();
-$proto298["m_strName"] = "urna";
-$proto298["m_srcTableName"] = "Alc - Por Sector";
-$proto298["m_columns"] = array();
-$proto298["m_columns"][] = "id_distrito";
-$proto298["m_columns"][] = "id_sector";
-$proto298["m_columns"][] = "id_urna";
-$proto298["m_columns"][] = "nombre_centro";
-$proto298["m_columns"][] = "ubicación";
-$proto298["m_columns"][] = "votantes";
-$obj = new SQLTable($proto298);
-
-$proto297["m_table"] = $obj;
-$proto297["m_sql"] = "inner join urna as u on a.id_urna = u.id_urna";
-$proto297["m_alias"] = "u";
-$proto297["m_srcTableName"] = "Alc - Por Sector";
-$proto299=array();
-$proto299["m_sql"] = "a.id_urna = u.id_urna";
-$proto299["m_uniontype"] = "SQLL_UNKNOWN";
-						$obj = new SQLField(array(
-	"m_strName" => "id_urna",
-	"m_strTable" => "a",
-	"m_srcTableName" => "Alc - Por Sector"
-));
-
-$proto299["m_column"]=$obj;
-$proto299["m_contained"] = array();
-$proto299["m_strCase"] = "= u.id_urna";
-$proto299["m_havingmode"] = false;
-$proto299["m_inBrackets"] = false;
-$proto299["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto299);
-
-$proto297["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto297);
-
-$proto284["m_fromlist"][]=$obj;
-$proto284["m_groupby"] = array();
-$proto284["m_orderby"] = array();
-$proto284["m_srcTableName"]="Alc - Por Sector";		
-$obj = new SQLQuery($proto284);
-
-$proto283["m_sql"] = "(select sum(a.validos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector)";
-$proto283["m_srcTableName"] = "Alc - Por Sector";
-$proto283["m_expr"]=$obj;
-$proto283["m_alias"] = "Validos";
-$obj = new SQLFieldListItem($proto283);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto301=array();
-			$proto302=array();
-$proto302["m_strHead"] = "select";
-$proto302["m_strFieldList"] = "sum(a.blancos)";
-$proto302["m_strFrom"] = "from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna";
-$proto302["m_strWhere"] = "u.id_sector = ur.id_sector";
-$proto302["m_strOrderBy"] = "";
-	
-		;
-			$proto302["cipherer"] = null;
-$proto304=array();
-$proto304["m_sql"] = "u.id_sector = ur.id_sector";
-$proto304["m_uniontype"] = "SQLL_UNKNOWN";
-						$obj = new SQLField(array(
-	"m_strName" => "id_sector",
-	"m_strTable" => "u",
-	"m_srcTableName" => "Alc - Por Sector"
-));
-
-$proto304["m_column"]=$obj;
-$proto304["m_contained"] = array();
-$proto304["m_strCase"] = "= ur.id_sector";
-$proto304["m_havingmode"] = false;
-$proto304["m_inBrackets"] = false;
-$proto304["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto304);
-
-$proto302["m_where"] = $obj;
-$proto306=array();
-$proto306["m_sql"] = "";
-$proto306["m_uniontype"] = "SQLL_UNKNOWN";
-	$obj = new SQLNonParsed(array(
-	"m_sql" => ""
-));
-
-$proto306["m_column"]=$obj;
-$proto306["m_contained"] = array();
-$proto306["m_strCase"] = "";
-$proto306["m_havingmode"] = false;
-$proto306["m_inBrackets"] = false;
-$proto306["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto306);
-
-$proto302["m_having"] = $obj;
-$proto302["m_fieldlist"] = array();
-						$proto308=array();
-			$proto309=array();
-$proto309["m_functiontype"] = "SQLF_SUM";
-$proto309["m_arguments"] = array();
+$proto281["m_having"] = $obj;
+$proto281["m_fieldlist"] = array();
+						$proto287=array();
+			$proto288=array();
+$proto288["m_functiontype"] = "SQLF_SUM";
+$proto288["m_arguments"] = array();
 						$obj = new SQLField(array(
 	"m_strName" => "blancos",
 	"m_strTable" => "a",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto309["m_arguments"][]=$obj;
-$proto309["m_strFunctionName"] = "sum";
-$obj = new SQLFunctionCall($proto309);
+$proto288["m_arguments"][]=$obj;
+$proto288["m_strFunctionName"] = "sum";
+$obj = new SQLFunctionCall($proto288);
 
-$proto308["m_sql"] = "sum(a.blancos)";
-$proto308["m_srcTableName"] = "Alc - Por Sector";
-$proto308["m_expr"]=$obj;
-$proto308["m_alias"] = "";
-$obj = new SQLFieldListItem($proto308);
+$proto287["m_sql"] = "sum(a.blancos)";
+$proto287["m_srcTableName"] = "Alc - Por Sector";
+$proto287["m_expr"]=$obj;
+$proto287["m_alias"] = "";
+$obj = new SQLFieldListItem($proto287);
 
-$proto302["m_fieldlist"][]=$obj;
-$proto302["m_fromlist"] = array();
-												$proto311=array();
-$proto311["m_link"] = "SQLL_MAIN";
-			$proto312=array();
-$proto312["m_strName"] = "voto_alcalde";
-$proto312["m_srcTableName"] = "Alc - Por Sector";
-$proto312["m_columns"] = array();
-$proto312["m_columns"][] = "elecciones";
-$proto312["m_columns"][] = "id_urna";
-$proto312["m_columns"][] = "candidato1";
-$proto312["m_columns"][] = "candidato2";
-$proto312["m_columns"][] = "candidato3";
-$proto312["m_columns"][] = "candidato4";
-$proto312["m_columns"][] = "candidato5";
-$proto312["m_columns"][] = "candidato6";
-$proto312["m_columns"][] = "candidato7";
-$proto312["m_columns"][] = "candidato8";
-$proto312["m_columns"][] = "candidato9";
-$proto312["m_columns"][] = "candidato10";
-$proto312["m_columns"][] = "candidato11";
-$proto312["m_columns"][] = "candidato12";
-$proto312["m_columns"][] = "validos";
-$proto312["m_columns"][] = "blancos";
-$proto312["m_columns"][] = "nulos";
-$proto312["m_columns"][] = "utilizados";
-$proto312["m_columns"][] = "no_utilizados";
-$proto312["m_columns"][] = "total";
-$proto312["m_columns"][] = "usuario";
-$proto312["m_columns"][] = "fecha";
-$proto312["m_columns"][] = "editado_por";
-$proto312["m_columns"][] = "fecha_edicion";
-$obj = new SQLTable($proto312);
+$proto281["m_fieldlist"][]=$obj;
+$proto281["m_fromlist"] = array();
+												$proto290=array();
+$proto290["m_link"] = "SQLL_MAIN";
+			$proto291=array();
+$proto291["m_strName"] = "voto_alcalde";
+$proto291["m_srcTableName"] = "Alc - Por Sector";
+$proto291["m_columns"] = array();
+$proto291["m_columns"][] = "elecciones";
+$proto291["m_columns"][] = "id_urna";
+$proto291["m_columns"][] = "candidato1";
+$proto291["m_columns"][] = "candidato2";
+$proto291["m_columns"][] = "candidato3";
+$proto291["m_columns"][] = "candidato4";
+$proto291["m_columns"][] = "candidato5";
+$proto291["m_columns"][] = "candidato6";
+$proto291["m_columns"][] = "candidato7";
+$proto291["m_columns"][] = "candidato8";
+$proto291["m_columns"][] = "candidato9";
+$proto291["m_columns"][] = "candidato10";
+$proto291["m_columns"][] = "candidato11";
+$proto291["m_columns"][] = "candidato12";
+$proto291["m_columns"][] = "validos";
+$proto291["m_columns"][] = "blancos";
+$proto291["m_columns"][] = "nulos";
+$proto291["m_columns"][] = "utilizados";
+$proto291["m_columns"][] = "no_utilizados";
+$proto291["m_columns"][] = "total";
+$proto291["m_columns"][] = "usuario";
+$proto291["m_columns"][] = "fecha";
+$proto291["m_columns"][] = "editado_por";
+$proto291["m_columns"][] = "fecha_edicion";
+$obj = new SQLTable($proto291);
 
-$proto311["m_table"] = $obj;
-$proto311["m_sql"] = "voto_alcalde as a";
-$proto311["m_alias"] = "a";
-$proto311["m_srcTableName"] = "Alc - Por Sector";
-$proto313=array();
-$proto313["m_sql"] = "";
-$proto313["m_uniontype"] = "SQLL_UNKNOWN";
+$proto290["m_table"] = $obj;
+$proto290["m_sql"] = "voto_alcalde as a";
+$proto290["m_alias"] = "a";
+$proto290["m_srcTableName"] = "Alc - Por Sector";
+$proto292=array();
+$proto292["m_sql"] = "";
+$proto292["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto313["m_column"]=$obj;
-$proto313["m_contained"] = array();
-$proto313["m_strCase"] = "";
-$proto313["m_havingmode"] = false;
-$proto313["m_inBrackets"] = false;
-$proto313["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto313);
+$proto292["m_column"]=$obj;
+$proto292["m_contained"] = array();
+$proto292["m_strCase"] = "";
+$proto292["m_havingmode"] = false;
+$proto292["m_inBrackets"] = false;
+$proto292["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto292);
 
-$proto311["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto311);
+$proto290["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto290);
 
-$proto302["m_fromlist"][]=$obj;
-												$proto315=array();
-$proto315["m_link"] = "SQLL_INNERJOIN";
-			$proto316=array();
-$proto316["m_strName"] = "urna";
-$proto316["m_srcTableName"] = "Alc - Por Sector";
-$proto316["m_columns"] = array();
-$proto316["m_columns"][] = "id_distrito";
-$proto316["m_columns"][] = "id_sector";
-$proto316["m_columns"][] = "id_urna";
-$proto316["m_columns"][] = "nombre_centro";
-$proto316["m_columns"][] = "ubicación";
-$proto316["m_columns"][] = "votantes";
-$obj = new SQLTable($proto316);
+$proto281["m_fromlist"][]=$obj;
+												$proto294=array();
+$proto294["m_link"] = "SQLL_INNERJOIN";
+			$proto295=array();
+$proto295["m_strName"] = "urna";
+$proto295["m_srcTableName"] = "Alc - Por Sector";
+$proto295["m_columns"] = array();
+$proto295["m_columns"][] = "id_distrito";
+$proto295["m_columns"][] = "id_sector";
+$proto295["m_columns"][] = "id_urna";
+$proto295["m_columns"][] = "nombre_centro";
+$proto295["m_columns"][] = "ubicación";
+$proto295["m_columns"][] = "votantes";
+$obj = new SQLTable($proto295);
 
-$proto315["m_table"] = $obj;
-$proto315["m_sql"] = "inner join urna as u on a.id_urna = u.id_urna";
-$proto315["m_alias"] = "u";
-$proto315["m_srcTableName"] = "Alc - Por Sector";
-$proto317=array();
-$proto317["m_sql"] = "a.id_urna = u.id_urna";
-$proto317["m_uniontype"] = "SQLL_UNKNOWN";
+$proto294["m_table"] = $obj;
+$proto294["m_sql"] = "inner join urna as u on a.id_urna = u.id_urna";
+$proto294["m_alias"] = "u";
+$proto294["m_srcTableName"] = "Alc - Por Sector";
+$proto296=array();
+$proto296["m_sql"] = "a.id_urna = u.id_urna";
+$proto296["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "id_urna",
 	"m_strTable" => "a",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto317["m_column"]=$obj;
-$proto317["m_contained"] = array();
-$proto317["m_strCase"] = "= u.id_urna";
-$proto317["m_havingmode"] = false;
-$proto317["m_inBrackets"] = false;
-$proto317["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto317);
+$proto296["m_column"]=$obj;
+$proto296["m_contained"] = array();
+$proto296["m_strCase"] = "= u.id_urna";
+$proto296["m_havingmode"] = false;
+$proto296["m_inBrackets"] = false;
+$proto296["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto296);
 
-$proto315["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto315);
+$proto294["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto294);
 
-$proto302["m_fromlist"][]=$obj;
-$proto302["m_groupby"] = array();
-$proto302["m_orderby"] = array();
-$proto302["m_srcTableName"]="Alc - Por Sector";		
-$obj = new SQLQuery($proto302);
+$proto281["m_fromlist"][]=$obj;
+$proto281["m_groupby"] = array();
+$proto281["m_orderby"] = array();
+$proto281["m_srcTableName"]="Alc - Por Sector";		
+$obj = new SQLQuery($proto281);
 
-$proto301["m_sql"] = "(select sum(a.blancos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector)";
-$proto301["m_srcTableName"] = "Alc - Por Sector";
-$proto301["m_expr"]=$obj;
-$proto301["m_alias"] = "Blancos";
-$obj = new SQLFieldListItem($proto301);
+$proto280["m_sql"] = "(select sum(a.blancos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector)";
+$proto280["m_srcTableName"] = "Alc - Por Sector";
+$proto280["m_expr"]=$obj;
+$proto280["m_alias"] = "Blancos";
+$obj = new SQLFieldListItem($proto280);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto319=array();
-			$proto320=array();
-$proto320["m_strHead"] = "select";
-$proto320["m_strFieldList"] = "sum(a.nulos)";
-$proto320["m_strFrom"] = "from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna";
-$proto320["m_strWhere"] = "u.id_sector = ur.id_sector";
-$proto320["m_strOrderBy"] = "";
+						$proto298=array();
+			$proto299=array();
+$proto299["m_strHead"] = "select";
+$proto299["m_strFieldList"] = "sum(a.nulos)";
+$proto299["m_strFrom"] = "from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna";
+$proto299["m_strWhere"] = "u.id_sector = ur.id_sector";
+$proto299["m_strOrderBy"] = "";
 	
 		;
-			$proto320["cipherer"] = null;
-$proto322=array();
-$proto322["m_sql"] = "u.id_sector = ur.id_sector";
-$proto322["m_uniontype"] = "SQLL_UNKNOWN";
+			$proto299["cipherer"] = null;
+$proto301=array();
+$proto301["m_sql"] = "u.id_sector = ur.id_sector";
+$proto301["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "id_sector",
 	"m_strTable" => "u",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto322["m_column"]=$obj;
-$proto322["m_contained"] = array();
-$proto322["m_strCase"] = "= ur.id_sector";
-$proto322["m_havingmode"] = false;
-$proto322["m_inBrackets"] = false;
-$proto322["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto322);
+$proto301["m_column"]=$obj;
+$proto301["m_contained"] = array();
+$proto301["m_strCase"] = "= ur.id_sector";
+$proto301["m_havingmode"] = false;
+$proto301["m_inBrackets"] = false;
+$proto301["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto301);
 
-$proto320["m_where"] = $obj;
-$proto324=array();
-$proto324["m_sql"] = "";
-$proto324["m_uniontype"] = "SQLL_UNKNOWN";
+$proto299["m_where"] = $obj;
+$proto303=array();
+$proto303["m_sql"] = "";
+$proto303["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto324["m_column"]=$obj;
-$proto324["m_contained"] = array();
-$proto324["m_strCase"] = "";
-$proto324["m_havingmode"] = false;
-$proto324["m_inBrackets"] = false;
-$proto324["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto324);
+$proto303["m_column"]=$obj;
+$proto303["m_contained"] = array();
+$proto303["m_strCase"] = "";
+$proto303["m_havingmode"] = false;
+$proto303["m_inBrackets"] = false;
+$proto303["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto303);
 
-$proto320["m_having"] = $obj;
-$proto320["m_fieldlist"] = array();
-						$proto326=array();
-			$proto327=array();
-$proto327["m_functiontype"] = "SQLF_SUM";
-$proto327["m_arguments"] = array();
+$proto299["m_having"] = $obj;
+$proto299["m_fieldlist"] = array();
+						$proto305=array();
+			$proto306=array();
+$proto306["m_functiontype"] = "SQLF_SUM";
+$proto306["m_arguments"] = array();
 						$obj = new SQLField(array(
 	"m_strName" => "nulos",
 	"m_strTable" => "a",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto327["m_arguments"][]=$obj;
-$proto327["m_strFunctionName"] = "sum";
-$obj = new SQLFunctionCall($proto327);
+$proto306["m_arguments"][]=$obj;
+$proto306["m_strFunctionName"] = "sum";
+$obj = new SQLFunctionCall($proto306);
 
-$proto326["m_sql"] = "sum(a.nulos)";
-$proto326["m_srcTableName"] = "Alc - Por Sector";
-$proto326["m_expr"]=$obj;
-$proto326["m_alias"] = "";
-$obj = new SQLFieldListItem($proto326);
+$proto305["m_sql"] = "sum(a.nulos)";
+$proto305["m_srcTableName"] = "Alc - Por Sector";
+$proto305["m_expr"]=$obj;
+$proto305["m_alias"] = "";
+$obj = new SQLFieldListItem($proto305);
 
-$proto320["m_fieldlist"][]=$obj;
-$proto320["m_fromlist"] = array();
-												$proto329=array();
-$proto329["m_link"] = "SQLL_MAIN";
-			$proto330=array();
-$proto330["m_strName"] = "voto_alcalde";
-$proto330["m_srcTableName"] = "Alc - Por Sector";
-$proto330["m_columns"] = array();
-$proto330["m_columns"][] = "elecciones";
-$proto330["m_columns"][] = "id_urna";
-$proto330["m_columns"][] = "candidato1";
-$proto330["m_columns"][] = "candidato2";
-$proto330["m_columns"][] = "candidato3";
-$proto330["m_columns"][] = "candidato4";
-$proto330["m_columns"][] = "candidato5";
-$proto330["m_columns"][] = "candidato6";
-$proto330["m_columns"][] = "candidato7";
-$proto330["m_columns"][] = "candidato8";
-$proto330["m_columns"][] = "candidato9";
-$proto330["m_columns"][] = "candidato10";
-$proto330["m_columns"][] = "candidato11";
-$proto330["m_columns"][] = "candidato12";
-$proto330["m_columns"][] = "validos";
-$proto330["m_columns"][] = "blancos";
-$proto330["m_columns"][] = "nulos";
-$proto330["m_columns"][] = "utilizados";
-$proto330["m_columns"][] = "no_utilizados";
-$proto330["m_columns"][] = "total";
-$proto330["m_columns"][] = "usuario";
-$proto330["m_columns"][] = "fecha";
-$proto330["m_columns"][] = "editado_por";
-$proto330["m_columns"][] = "fecha_edicion";
-$obj = new SQLTable($proto330);
+$proto299["m_fieldlist"][]=$obj;
+$proto299["m_fromlist"] = array();
+												$proto308=array();
+$proto308["m_link"] = "SQLL_MAIN";
+			$proto309=array();
+$proto309["m_strName"] = "voto_alcalde";
+$proto309["m_srcTableName"] = "Alc - Por Sector";
+$proto309["m_columns"] = array();
+$proto309["m_columns"][] = "elecciones";
+$proto309["m_columns"][] = "id_urna";
+$proto309["m_columns"][] = "candidato1";
+$proto309["m_columns"][] = "candidato2";
+$proto309["m_columns"][] = "candidato3";
+$proto309["m_columns"][] = "candidato4";
+$proto309["m_columns"][] = "candidato5";
+$proto309["m_columns"][] = "candidato6";
+$proto309["m_columns"][] = "candidato7";
+$proto309["m_columns"][] = "candidato8";
+$proto309["m_columns"][] = "candidato9";
+$proto309["m_columns"][] = "candidato10";
+$proto309["m_columns"][] = "candidato11";
+$proto309["m_columns"][] = "candidato12";
+$proto309["m_columns"][] = "validos";
+$proto309["m_columns"][] = "blancos";
+$proto309["m_columns"][] = "nulos";
+$proto309["m_columns"][] = "utilizados";
+$proto309["m_columns"][] = "no_utilizados";
+$proto309["m_columns"][] = "total";
+$proto309["m_columns"][] = "usuario";
+$proto309["m_columns"][] = "fecha";
+$proto309["m_columns"][] = "editado_por";
+$proto309["m_columns"][] = "fecha_edicion";
+$obj = new SQLTable($proto309);
 
-$proto329["m_table"] = $obj;
-$proto329["m_sql"] = "voto_alcalde as a";
-$proto329["m_alias"] = "a";
-$proto329["m_srcTableName"] = "Alc - Por Sector";
-$proto331=array();
-$proto331["m_sql"] = "";
-$proto331["m_uniontype"] = "SQLL_UNKNOWN";
+$proto308["m_table"] = $obj;
+$proto308["m_sql"] = "voto_alcalde as a";
+$proto308["m_alias"] = "a";
+$proto308["m_srcTableName"] = "Alc - Por Sector";
+$proto310=array();
+$proto310["m_sql"] = "";
+$proto310["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto331["m_column"]=$obj;
-$proto331["m_contained"] = array();
-$proto331["m_strCase"] = "";
-$proto331["m_havingmode"] = false;
-$proto331["m_inBrackets"] = false;
-$proto331["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto331);
+$proto310["m_column"]=$obj;
+$proto310["m_contained"] = array();
+$proto310["m_strCase"] = "";
+$proto310["m_havingmode"] = false;
+$proto310["m_inBrackets"] = false;
+$proto310["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto310);
 
-$proto329["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto329);
+$proto308["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto308);
 
-$proto320["m_fromlist"][]=$obj;
-												$proto333=array();
-$proto333["m_link"] = "SQLL_INNERJOIN";
-			$proto334=array();
-$proto334["m_strName"] = "urna";
-$proto334["m_srcTableName"] = "Alc - Por Sector";
-$proto334["m_columns"] = array();
-$proto334["m_columns"][] = "id_distrito";
-$proto334["m_columns"][] = "id_sector";
-$proto334["m_columns"][] = "id_urna";
-$proto334["m_columns"][] = "nombre_centro";
-$proto334["m_columns"][] = "ubicación";
-$proto334["m_columns"][] = "votantes";
-$obj = new SQLTable($proto334);
+$proto299["m_fromlist"][]=$obj;
+												$proto312=array();
+$proto312["m_link"] = "SQLL_INNERJOIN";
+			$proto313=array();
+$proto313["m_strName"] = "urna";
+$proto313["m_srcTableName"] = "Alc - Por Sector";
+$proto313["m_columns"] = array();
+$proto313["m_columns"][] = "id_distrito";
+$proto313["m_columns"][] = "id_sector";
+$proto313["m_columns"][] = "id_urna";
+$proto313["m_columns"][] = "nombre_centro";
+$proto313["m_columns"][] = "ubicación";
+$proto313["m_columns"][] = "votantes";
+$obj = new SQLTable($proto313);
 
-$proto333["m_table"] = $obj;
-$proto333["m_sql"] = "inner join urna as u on a.id_urna = u.id_urna";
-$proto333["m_alias"] = "u";
-$proto333["m_srcTableName"] = "Alc - Por Sector";
-$proto335=array();
-$proto335["m_sql"] = "a.id_urna = u.id_urna";
-$proto335["m_uniontype"] = "SQLL_UNKNOWN";
+$proto312["m_table"] = $obj;
+$proto312["m_sql"] = "inner join urna as u on a.id_urna = u.id_urna";
+$proto312["m_alias"] = "u";
+$proto312["m_srcTableName"] = "Alc - Por Sector";
+$proto314=array();
+$proto314["m_sql"] = "a.id_urna = u.id_urna";
+$proto314["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "id_urna",
 	"m_strTable" => "a",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto335["m_column"]=$obj;
-$proto335["m_contained"] = array();
-$proto335["m_strCase"] = "= u.id_urna";
-$proto335["m_havingmode"] = false;
-$proto335["m_inBrackets"] = false;
-$proto335["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto335);
+$proto314["m_column"]=$obj;
+$proto314["m_contained"] = array();
+$proto314["m_strCase"] = "= u.id_urna";
+$proto314["m_havingmode"] = false;
+$proto314["m_inBrackets"] = false;
+$proto314["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto314);
 
-$proto333["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto333);
+$proto312["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto312);
 
-$proto320["m_fromlist"][]=$obj;
-$proto320["m_groupby"] = array();
-$proto320["m_orderby"] = array();
-$proto320["m_srcTableName"]="Alc - Por Sector";		
-$obj = new SQLQuery($proto320);
+$proto299["m_fromlist"][]=$obj;
+$proto299["m_groupby"] = array();
+$proto299["m_orderby"] = array();
+$proto299["m_srcTableName"]="Alc - Por Sector";		
+$obj = new SQLQuery($proto299);
 
-$proto319["m_sql"] = "(select sum(a.nulos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector)";
-$proto319["m_srcTableName"] = "Alc - Por Sector";
-$proto319["m_expr"]=$obj;
-$proto319["m_alias"] = "Nulos";
-$obj = new SQLFieldListItem($proto319);
+$proto298["m_sql"] = "(select sum(a.nulos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector)";
+$proto298["m_srcTableName"] = "Alc - Por Sector";
+$proto298["m_expr"]=$obj;
+$proto298["m_alias"] = "Nulos";
+$obj = new SQLFieldListItem($proto298);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto337=array();
-			$proto338=array();
-$proto338["m_strHead"] = "select";
-$proto338["m_strFieldList"] = "sum(a.utilizados)";
-$proto338["m_strFrom"] = "from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna";
-$proto338["m_strWhere"] = "u.id_sector = ur.id_sector";
-$proto338["m_strOrderBy"] = "";
+						$proto316=array();
+			$proto317=array();
+$proto317["m_strHead"] = "select";
+$proto317["m_strFieldList"] = "sum(a.utilizados)";
+$proto317["m_strFrom"] = "from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna";
+$proto317["m_strWhere"] = "u.id_sector = ur.id_sector";
+$proto317["m_strOrderBy"] = "";
 	
 		;
-			$proto338["cipherer"] = null;
-$proto340=array();
-$proto340["m_sql"] = "u.id_sector = ur.id_sector";
-$proto340["m_uniontype"] = "SQLL_UNKNOWN";
+			$proto317["cipherer"] = null;
+$proto319=array();
+$proto319["m_sql"] = "u.id_sector = ur.id_sector";
+$proto319["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "id_sector",
 	"m_strTable" => "u",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto340["m_column"]=$obj;
-$proto340["m_contained"] = array();
-$proto340["m_strCase"] = "= ur.id_sector";
-$proto340["m_havingmode"] = false;
-$proto340["m_inBrackets"] = false;
-$proto340["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto340);
+$proto319["m_column"]=$obj;
+$proto319["m_contained"] = array();
+$proto319["m_strCase"] = "= ur.id_sector";
+$proto319["m_havingmode"] = false;
+$proto319["m_inBrackets"] = false;
+$proto319["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto319);
 
-$proto338["m_where"] = $obj;
-$proto342=array();
-$proto342["m_sql"] = "";
-$proto342["m_uniontype"] = "SQLL_UNKNOWN";
+$proto317["m_where"] = $obj;
+$proto321=array();
+$proto321["m_sql"] = "";
+$proto321["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto342["m_column"]=$obj;
-$proto342["m_contained"] = array();
-$proto342["m_strCase"] = "";
-$proto342["m_havingmode"] = false;
-$proto342["m_inBrackets"] = false;
-$proto342["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto342);
+$proto321["m_column"]=$obj;
+$proto321["m_contained"] = array();
+$proto321["m_strCase"] = "";
+$proto321["m_havingmode"] = false;
+$proto321["m_inBrackets"] = false;
+$proto321["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto321);
 
-$proto338["m_having"] = $obj;
-$proto338["m_fieldlist"] = array();
-						$proto344=array();
-			$proto345=array();
-$proto345["m_functiontype"] = "SQLF_SUM";
-$proto345["m_arguments"] = array();
+$proto317["m_having"] = $obj;
+$proto317["m_fieldlist"] = array();
+						$proto323=array();
+			$proto324=array();
+$proto324["m_functiontype"] = "SQLF_SUM";
+$proto324["m_arguments"] = array();
 						$obj = new SQLField(array(
 	"m_strName" => "utilizados",
 	"m_strTable" => "a",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto345["m_arguments"][]=$obj;
-$proto345["m_strFunctionName"] = "sum";
-$obj = new SQLFunctionCall($proto345);
+$proto324["m_arguments"][]=$obj;
+$proto324["m_strFunctionName"] = "sum";
+$obj = new SQLFunctionCall($proto324);
 
-$proto344["m_sql"] = "sum(a.utilizados)";
-$proto344["m_srcTableName"] = "Alc - Por Sector";
-$proto344["m_expr"]=$obj;
-$proto344["m_alias"] = "";
-$obj = new SQLFieldListItem($proto344);
+$proto323["m_sql"] = "sum(a.utilizados)";
+$proto323["m_srcTableName"] = "Alc - Por Sector";
+$proto323["m_expr"]=$obj;
+$proto323["m_alias"] = "";
+$obj = new SQLFieldListItem($proto323);
 
-$proto338["m_fieldlist"][]=$obj;
-$proto338["m_fromlist"] = array();
-												$proto347=array();
-$proto347["m_link"] = "SQLL_MAIN";
-			$proto348=array();
-$proto348["m_strName"] = "voto_alcalde";
-$proto348["m_srcTableName"] = "Alc - Por Sector";
-$proto348["m_columns"] = array();
-$proto348["m_columns"][] = "elecciones";
-$proto348["m_columns"][] = "id_urna";
-$proto348["m_columns"][] = "candidato1";
-$proto348["m_columns"][] = "candidato2";
-$proto348["m_columns"][] = "candidato3";
-$proto348["m_columns"][] = "candidato4";
-$proto348["m_columns"][] = "candidato5";
-$proto348["m_columns"][] = "candidato6";
-$proto348["m_columns"][] = "candidato7";
-$proto348["m_columns"][] = "candidato8";
-$proto348["m_columns"][] = "candidato9";
-$proto348["m_columns"][] = "candidato10";
-$proto348["m_columns"][] = "candidato11";
-$proto348["m_columns"][] = "candidato12";
-$proto348["m_columns"][] = "validos";
-$proto348["m_columns"][] = "blancos";
-$proto348["m_columns"][] = "nulos";
-$proto348["m_columns"][] = "utilizados";
-$proto348["m_columns"][] = "no_utilizados";
-$proto348["m_columns"][] = "total";
-$proto348["m_columns"][] = "usuario";
-$proto348["m_columns"][] = "fecha";
-$proto348["m_columns"][] = "editado_por";
-$proto348["m_columns"][] = "fecha_edicion";
-$obj = new SQLTable($proto348);
+$proto317["m_fieldlist"][]=$obj;
+$proto317["m_fromlist"] = array();
+												$proto326=array();
+$proto326["m_link"] = "SQLL_MAIN";
+			$proto327=array();
+$proto327["m_strName"] = "voto_alcalde";
+$proto327["m_srcTableName"] = "Alc - Por Sector";
+$proto327["m_columns"] = array();
+$proto327["m_columns"][] = "elecciones";
+$proto327["m_columns"][] = "id_urna";
+$proto327["m_columns"][] = "candidato1";
+$proto327["m_columns"][] = "candidato2";
+$proto327["m_columns"][] = "candidato3";
+$proto327["m_columns"][] = "candidato4";
+$proto327["m_columns"][] = "candidato5";
+$proto327["m_columns"][] = "candidato6";
+$proto327["m_columns"][] = "candidato7";
+$proto327["m_columns"][] = "candidato8";
+$proto327["m_columns"][] = "candidato9";
+$proto327["m_columns"][] = "candidato10";
+$proto327["m_columns"][] = "candidato11";
+$proto327["m_columns"][] = "candidato12";
+$proto327["m_columns"][] = "validos";
+$proto327["m_columns"][] = "blancos";
+$proto327["m_columns"][] = "nulos";
+$proto327["m_columns"][] = "utilizados";
+$proto327["m_columns"][] = "no_utilizados";
+$proto327["m_columns"][] = "total";
+$proto327["m_columns"][] = "usuario";
+$proto327["m_columns"][] = "fecha";
+$proto327["m_columns"][] = "editado_por";
+$proto327["m_columns"][] = "fecha_edicion";
+$obj = new SQLTable($proto327);
 
-$proto347["m_table"] = $obj;
-$proto347["m_sql"] = "voto_alcalde as a";
-$proto347["m_alias"] = "a";
-$proto347["m_srcTableName"] = "Alc - Por Sector";
-$proto349=array();
-$proto349["m_sql"] = "";
-$proto349["m_uniontype"] = "SQLL_UNKNOWN";
+$proto326["m_table"] = $obj;
+$proto326["m_sql"] = "voto_alcalde as a";
+$proto326["m_alias"] = "a";
+$proto326["m_srcTableName"] = "Alc - Por Sector";
+$proto328=array();
+$proto328["m_sql"] = "";
+$proto328["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto349["m_column"]=$obj;
-$proto349["m_contained"] = array();
-$proto349["m_strCase"] = "";
-$proto349["m_havingmode"] = false;
-$proto349["m_inBrackets"] = false;
-$proto349["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto349);
+$proto328["m_column"]=$obj;
+$proto328["m_contained"] = array();
+$proto328["m_strCase"] = "";
+$proto328["m_havingmode"] = false;
+$proto328["m_inBrackets"] = false;
+$proto328["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto328);
 
-$proto347["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto347);
+$proto326["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto326);
 
-$proto338["m_fromlist"][]=$obj;
-												$proto351=array();
-$proto351["m_link"] = "SQLL_INNERJOIN";
-			$proto352=array();
-$proto352["m_strName"] = "urna";
-$proto352["m_srcTableName"] = "Alc - Por Sector";
-$proto352["m_columns"] = array();
-$proto352["m_columns"][] = "id_distrito";
-$proto352["m_columns"][] = "id_sector";
-$proto352["m_columns"][] = "id_urna";
-$proto352["m_columns"][] = "nombre_centro";
-$proto352["m_columns"][] = "ubicación";
-$proto352["m_columns"][] = "votantes";
-$obj = new SQLTable($proto352);
+$proto317["m_fromlist"][]=$obj;
+												$proto330=array();
+$proto330["m_link"] = "SQLL_INNERJOIN";
+			$proto331=array();
+$proto331["m_strName"] = "urna";
+$proto331["m_srcTableName"] = "Alc - Por Sector";
+$proto331["m_columns"] = array();
+$proto331["m_columns"][] = "id_distrito";
+$proto331["m_columns"][] = "id_sector";
+$proto331["m_columns"][] = "id_urna";
+$proto331["m_columns"][] = "nombre_centro";
+$proto331["m_columns"][] = "ubicación";
+$proto331["m_columns"][] = "votantes";
+$obj = new SQLTable($proto331);
 
-$proto351["m_table"] = $obj;
-$proto351["m_sql"] = "inner join urna as u on a.id_urna = u.id_urna";
-$proto351["m_alias"] = "u";
-$proto351["m_srcTableName"] = "Alc - Por Sector";
-$proto353=array();
-$proto353["m_sql"] = "a.id_urna = u.id_urna";
-$proto353["m_uniontype"] = "SQLL_UNKNOWN";
+$proto330["m_table"] = $obj;
+$proto330["m_sql"] = "inner join urna as u on a.id_urna = u.id_urna";
+$proto330["m_alias"] = "u";
+$proto330["m_srcTableName"] = "Alc - Por Sector";
+$proto332=array();
+$proto332["m_sql"] = "a.id_urna = u.id_urna";
+$proto332["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "id_urna",
 	"m_strTable" => "a",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto353["m_column"]=$obj;
-$proto353["m_contained"] = array();
-$proto353["m_strCase"] = "= u.id_urna";
-$proto353["m_havingmode"] = false;
-$proto353["m_inBrackets"] = false;
-$proto353["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto353);
+$proto332["m_column"]=$obj;
+$proto332["m_contained"] = array();
+$proto332["m_strCase"] = "= u.id_urna";
+$proto332["m_havingmode"] = false;
+$proto332["m_inBrackets"] = false;
+$proto332["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto332);
 
-$proto351["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto351);
+$proto330["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto330);
 
-$proto338["m_fromlist"][]=$obj;
-$proto338["m_groupby"] = array();
-$proto338["m_orderby"] = array();
-$proto338["m_srcTableName"]="Alc - Por Sector";		
-$obj = new SQLQuery($proto338);
+$proto317["m_fromlist"][]=$obj;
+$proto317["m_groupby"] = array();
+$proto317["m_orderby"] = array();
+$proto317["m_srcTableName"]="Alc - Por Sector";		
+$obj = new SQLQuery($proto317);
 
-$proto337["m_sql"] = "(select sum(a.utilizados) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector)";
-$proto337["m_srcTableName"] = "Alc - Por Sector";
-$proto337["m_expr"]=$obj;
-$proto337["m_alias"] = "Utilizados";
-$obj = new SQLFieldListItem($proto337);
+$proto316["m_sql"] = "(select sum(a.utilizados) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector)";
+$proto316["m_srcTableName"] = "Alc - Por Sector";
+$proto316["m_expr"]=$obj;
+$proto316["m_alias"] = "Utilizados";
+$obj = new SQLFieldListItem($proto316);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto355=array();
-			$proto356=array();
-$proto356["m_strHead"] = "select";
-$proto356["m_strFieldList"] = "sum(a.no_utilizados)";
-$proto356["m_strFrom"] = "from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna";
-$proto356["m_strWhere"] = "u.id_sector = ur.id_sector";
-$proto356["m_strOrderBy"] = "";
+						$proto334=array();
+			$proto335=array();
+$proto335["m_strHead"] = "select";
+$proto335["m_strFieldList"] = "sum(a.no_utilizados)";
+$proto335["m_strFrom"] = "from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna";
+$proto335["m_strWhere"] = "u.id_sector = ur.id_sector";
+$proto335["m_strOrderBy"] = "";
 	
 		;
-			$proto356["cipherer"] = null;
-$proto358=array();
-$proto358["m_sql"] = "u.id_sector = ur.id_sector";
-$proto358["m_uniontype"] = "SQLL_UNKNOWN";
+			$proto335["cipherer"] = null;
+$proto337=array();
+$proto337["m_sql"] = "u.id_sector = ur.id_sector";
+$proto337["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "id_sector",
 	"m_strTable" => "u",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto358["m_column"]=$obj;
-$proto358["m_contained"] = array();
-$proto358["m_strCase"] = "= ur.id_sector";
-$proto358["m_havingmode"] = false;
-$proto358["m_inBrackets"] = false;
-$proto358["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto358);
+$proto337["m_column"]=$obj;
+$proto337["m_contained"] = array();
+$proto337["m_strCase"] = "= ur.id_sector";
+$proto337["m_havingmode"] = false;
+$proto337["m_inBrackets"] = false;
+$proto337["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto337);
 
-$proto356["m_where"] = $obj;
-$proto360=array();
-$proto360["m_sql"] = "";
-$proto360["m_uniontype"] = "SQLL_UNKNOWN";
+$proto335["m_where"] = $obj;
+$proto339=array();
+$proto339["m_sql"] = "";
+$proto339["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto360["m_column"]=$obj;
-$proto360["m_contained"] = array();
-$proto360["m_strCase"] = "";
-$proto360["m_havingmode"] = false;
-$proto360["m_inBrackets"] = false;
-$proto360["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto360);
+$proto339["m_column"]=$obj;
+$proto339["m_contained"] = array();
+$proto339["m_strCase"] = "";
+$proto339["m_havingmode"] = false;
+$proto339["m_inBrackets"] = false;
+$proto339["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto339);
 
-$proto356["m_having"] = $obj;
-$proto356["m_fieldlist"] = array();
-						$proto362=array();
-			$proto363=array();
-$proto363["m_functiontype"] = "SQLF_SUM";
-$proto363["m_arguments"] = array();
+$proto335["m_having"] = $obj;
+$proto335["m_fieldlist"] = array();
+						$proto341=array();
+			$proto342=array();
+$proto342["m_functiontype"] = "SQLF_SUM";
+$proto342["m_arguments"] = array();
 						$obj = new SQLField(array(
 	"m_strName" => "no_utilizados",
 	"m_strTable" => "a",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto363["m_arguments"][]=$obj;
-$proto363["m_strFunctionName"] = "sum";
-$obj = new SQLFunctionCall($proto363);
+$proto342["m_arguments"][]=$obj;
+$proto342["m_strFunctionName"] = "sum";
+$obj = new SQLFunctionCall($proto342);
 
-$proto362["m_sql"] = "sum(a.no_utilizados)";
-$proto362["m_srcTableName"] = "Alc - Por Sector";
-$proto362["m_expr"]=$obj;
-$proto362["m_alias"] = "";
-$obj = new SQLFieldListItem($proto362);
+$proto341["m_sql"] = "sum(a.no_utilizados)";
+$proto341["m_srcTableName"] = "Alc - Por Sector";
+$proto341["m_expr"]=$obj;
+$proto341["m_alias"] = "";
+$obj = new SQLFieldListItem($proto341);
 
-$proto356["m_fieldlist"][]=$obj;
-$proto356["m_fromlist"] = array();
-												$proto365=array();
-$proto365["m_link"] = "SQLL_MAIN";
-			$proto366=array();
-$proto366["m_strName"] = "voto_alcalde";
-$proto366["m_srcTableName"] = "Alc - Por Sector";
-$proto366["m_columns"] = array();
-$proto366["m_columns"][] = "elecciones";
-$proto366["m_columns"][] = "id_urna";
-$proto366["m_columns"][] = "candidato1";
-$proto366["m_columns"][] = "candidato2";
-$proto366["m_columns"][] = "candidato3";
-$proto366["m_columns"][] = "candidato4";
-$proto366["m_columns"][] = "candidato5";
-$proto366["m_columns"][] = "candidato6";
-$proto366["m_columns"][] = "candidato7";
-$proto366["m_columns"][] = "candidato8";
-$proto366["m_columns"][] = "candidato9";
-$proto366["m_columns"][] = "candidato10";
-$proto366["m_columns"][] = "candidato11";
-$proto366["m_columns"][] = "candidato12";
-$proto366["m_columns"][] = "validos";
-$proto366["m_columns"][] = "blancos";
-$proto366["m_columns"][] = "nulos";
-$proto366["m_columns"][] = "utilizados";
-$proto366["m_columns"][] = "no_utilizados";
-$proto366["m_columns"][] = "total";
-$proto366["m_columns"][] = "usuario";
-$proto366["m_columns"][] = "fecha";
-$proto366["m_columns"][] = "editado_por";
-$proto366["m_columns"][] = "fecha_edicion";
-$obj = new SQLTable($proto366);
+$proto335["m_fieldlist"][]=$obj;
+$proto335["m_fromlist"] = array();
+												$proto344=array();
+$proto344["m_link"] = "SQLL_MAIN";
+			$proto345=array();
+$proto345["m_strName"] = "voto_alcalde";
+$proto345["m_srcTableName"] = "Alc - Por Sector";
+$proto345["m_columns"] = array();
+$proto345["m_columns"][] = "elecciones";
+$proto345["m_columns"][] = "id_urna";
+$proto345["m_columns"][] = "candidato1";
+$proto345["m_columns"][] = "candidato2";
+$proto345["m_columns"][] = "candidato3";
+$proto345["m_columns"][] = "candidato4";
+$proto345["m_columns"][] = "candidato5";
+$proto345["m_columns"][] = "candidato6";
+$proto345["m_columns"][] = "candidato7";
+$proto345["m_columns"][] = "candidato8";
+$proto345["m_columns"][] = "candidato9";
+$proto345["m_columns"][] = "candidato10";
+$proto345["m_columns"][] = "candidato11";
+$proto345["m_columns"][] = "candidato12";
+$proto345["m_columns"][] = "validos";
+$proto345["m_columns"][] = "blancos";
+$proto345["m_columns"][] = "nulos";
+$proto345["m_columns"][] = "utilizados";
+$proto345["m_columns"][] = "no_utilizados";
+$proto345["m_columns"][] = "total";
+$proto345["m_columns"][] = "usuario";
+$proto345["m_columns"][] = "fecha";
+$proto345["m_columns"][] = "editado_por";
+$proto345["m_columns"][] = "fecha_edicion";
+$obj = new SQLTable($proto345);
 
-$proto365["m_table"] = $obj;
-$proto365["m_sql"] = "voto_alcalde as a";
-$proto365["m_alias"] = "a";
-$proto365["m_srcTableName"] = "Alc - Por Sector";
-$proto367=array();
-$proto367["m_sql"] = "";
-$proto367["m_uniontype"] = "SQLL_UNKNOWN";
+$proto344["m_table"] = $obj;
+$proto344["m_sql"] = "voto_alcalde as a";
+$proto344["m_alias"] = "a";
+$proto344["m_srcTableName"] = "Alc - Por Sector";
+$proto346=array();
+$proto346["m_sql"] = "";
+$proto346["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto367["m_column"]=$obj;
-$proto367["m_contained"] = array();
-$proto367["m_strCase"] = "";
-$proto367["m_havingmode"] = false;
-$proto367["m_inBrackets"] = false;
-$proto367["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto367);
+$proto346["m_column"]=$obj;
+$proto346["m_contained"] = array();
+$proto346["m_strCase"] = "";
+$proto346["m_havingmode"] = false;
+$proto346["m_inBrackets"] = false;
+$proto346["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto346);
 
-$proto365["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto365);
+$proto344["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto344);
 
-$proto356["m_fromlist"][]=$obj;
-												$proto369=array();
-$proto369["m_link"] = "SQLL_INNERJOIN";
-			$proto370=array();
-$proto370["m_strName"] = "urna";
-$proto370["m_srcTableName"] = "Alc - Por Sector";
-$proto370["m_columns"] = array();
-$proto370["m_columns"][] = "id_distrito";
-$proto370["m_columns"][] = "id_sector";
-$proto370["m_columns"][] = "id_urna";
-$proto370["m_columns"][] = "nombre_centro";
-$proto370["m_columns"][] = "ubicación";
-$proto370["m_columns"][] = "votantes";
-$obj = new SQLTable($proto370);
+$proto335["m_fromlist"][]=$obj;
+												$proto348=array();
+$proto348["m_link"] = "SQLL_INNERJOIN";
+			$proto349=array();
+$proto349["m_strName"] = "urna";
+$proto349["m_srcTableName"] = "Alc - Por Sector";
+$proto349["m_columns"] = array();
+$proto349["m_columns"][] = "id_distrito";
+$proto349["m_columns"][] = "id_sector";
+$proto349["m_columns"][] = "id_urna";
+$proto349["m_columns"][] = "nombre_centro";
+$proto349["m_columns"][] = "ubicación";
+$proto349["m_columns"][] = "votantes";
+$obj = new SQLTable($proto349);
 
-$proto369["m_table"] = $obj;
-$proto369["m_sql"] = "inner join urna as u on a.id_urna = u.id_urna";
-$proto369["m_alias"] = "u";
-$proto369["m_srcTableName"] = "Alc - Por Sector";
-$proto371=array();
-$proto371["m_sql"] = "a.id_urna = u.id_urna";
-$proto371["m_uniontype"] = "SQLL_UNKNOWN";
+$proto348["m_table"] = $obj;
+$proto348["m_sql"] = "inner join urna as u on a.id_urna = u.id_urna";
+$proto348["m_alias"] = "u";
+$proto348["m_srcTableName"] = "Alc - Por Sector";
+$proto350=array();
+$proto350["m_sql"] = "a.id_urna = u.id_urna";
+$proto350["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "id_urna",
 	"m_strTable" => "a",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto371["m_column"]=$obj;
-$proto371["m_contained"] = array();
-$proto371["m_strCase"] = "= u.id_urna";
-$proto371["m_havingmode"] = false;
-$proto371["m_inBrackets"] = false;
-$proto371["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto371);
+$proto350["m_column"]=$obj;
+$proto350["m_contained"] = array();
+$proto350["m_strCase"] = "= u.id_urna";
+$proto350["m_havingmode"] = false;
+$proto350["m_inBrackets"] = false;
+$proto350["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto350);
 
-$proto369["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto369);
+$proto348["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto348);
 
-$proto356["m_fromlist"][]=$obj;
-$proto356["m_groupby"] = array();
-$proto356["m_orderby"] = array();
-$proto356["m_srcTableName"]="Alc - Por Sector";		
-$obj = new SQLQuery($proto356);
+$proto335["m_fromlist"][]=$obj;
+$proto335["m_groupby"] = array();
+$proto335["m_orderby"] = array();
+$proto335["m_srcTableName"]="Alc - Por Sector";		
+$obj = new SQLQuery($proto335);
 
-$proto355["m_sql"] = "(select sum(a.no_utilizados) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector)";
-$proto355["m_srcTableName"] = "Alc - Por Sector";
-$proto355["m_expr"]=$obj;
-$proto355["m_alias"] = "No_Utilizados";
-$obj = new SQLFieldListItem($proto355);
+$proto334["m_sql"] = "(select sum(a.no_utilizados) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector)";
+$proto334["m_srcTableName"] = "Alc - Por Sector";
+$proto334["m_expr"]=$obj;
+$proto334["m_alias"] = "No_Utilizados";
+$obj = new SQLFieldListItem($proto334);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto373=array();
-			$proto374=array();
-$proto374["m_strHead"] = "select";
-$proto374["m_strFieldList"] = "sum(a.total)";
-$proto374["m_strFrom"] = "from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna";
-$proto374["m_strWhere"] = "u.id_sector = ur.id_sector";
-$proto374["m_strOrderBy"] = "";
+						$proto352=array();
+			$proto353=array();
+$proto353["m_strHead"] = "select";
+$proto353["m_strFieldList"] = "sum(a.total)";
+$proto353["m_strFrom"] = "from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna";
+$proto353["m_strWhere"] = "u.id_sector = ur.id_sector";
+$proto353["m_strOrderBy"] = "";
 	
 		;
-			$proto374["cipherer"] = null;
-$proto376=array();
-$proto376["m_sql"] = "u.id_sector = ur.id_sector";
-$proto376["m_uniontype"] = "SQLL_UNKNOWN";
+			$proto353["cipherer"] = null;
+$proto355=array();
+$proto355["m_sql"] = "u.id_sector = ur.id_sector";
+$proto355["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "id_sector",
 	"m_strTable" => "u",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto376["m_column"]=$obj;
-$proto376["m_contained"] = array();
-$proto376["m_strCase"] = "= ur.id_sector";
-$proto376["m_havingmode"] = false;
-$proto376["m_inBrackets"] = false;
-$proto376["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto376);
+$proto355["m_column"]=$obj;
+$proto355["m_contained"] = array();
+$proto355["m_strCase"] = "= ur.id_sector";
+$proto355["m_havingmode"] = false;
+$proto355["m_inBrackets"] = false;
+$proto355["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto355);
 
-$proto374["m_where"] = $obj;
-$proto378=array();
-$proto378["m_sql"] = "";
-$proto378["m_uniontype"] = "SQLL_UNKNOWN";
+$proto353["m_where"] = $obj;
+$proto357=array();
+$proto357["m_sql"] = "";
+$proto357["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto378["m_column"]=$obj;
-$proto378["m_contained"] = array();
-$proto378["m_strCase"] = "";
-$proto378["m_havingmode"] = false;
-$proto378["m_inBrackets"] = false;
-$proto378["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto378);
+$proto357["m_column"]=$obj;
+$proto357["m_contained"] = array();
+$proto357["m_strCase"] = "";
+$proto357["m_havingmode"] = false;
+$proto357["m_inBrackets"] = false;
+$proto357["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto357);
 
-$proto374["m_having"] = $obj;
-$proto374["m_fieldlist"] = array();
-						$proto380=array();
-			$proto381=array();
-$proto381["m_functiontype"] = "SQLF_SUM";
-$proto381["m_arguments"] = array();
+$proto353["m_having"] = $obj;
+$proto353["m_fieldlist"] = array();
+						$proto359=array();
+			$proto360=array();
+$proto360["m_functiontype"] = "SQLF_SUM";
+$proto360["m_arguments"] = array();
 						$obj = new SQLField(array(
 	"m_strName" => "total",
 	"m_strTable" => "a",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto381["m_arguments"][]=$obj;
-$proto381["m_strFunctionName"] = "sum";
-$obj = new SQLFunctionCall($proto381);
+$proto360["m_arguments"][]=$obj;
+$proto360["m_strFunctionName"] = "sum";
+$obj = new SQLFunctionCall($proto360);
 
-$proto380["m_sql"] = "sum(a.total)";
-$proto380["m_srcTableName"] = "Alc - Por Sector";
-$proto380["m_expr"]=$obj;
-$proto380["m_alias"] = "";
-$obj = new SQLFieldListItem($proto380);
+$proto359["m_sql"] = "sum(a.total)";
+$proto359["m_srcTableName"] = "Alc - Por Sector";
+$proto359["m_expr"]=$obj;
+$proto359["m_alias"] = "";
+$obj = new SQLFieldListItem($proto359);
 
-$proto374["m_fieldlist"][]=$obj;
-$proto374["m_fromlist"] = array();
-												$proto383=array();
-$proto383["m_link"] = "SQLL_MAIN";
-			$proto384=array();
-$proto384["m_strName"] = "voto_alcalde";
-$proto384["m_srcTableName"] = "Alc - Por Sector";
-$proto384["m_columns"] = array();
-$proto384["m_columns"][] = "elecciones";
-$proto384["m_columns"][] = "id_urna";
-$proto384["m_columns"][] = "candidato1";
-$proto384["m_columns"][] = "candidato2";
-$proto384["m_columns"][] = "candidato3";
-$proto384["m_columns"][] = "candidato4";
-$proto384["m_columns"][] = "candidato5";
-$proto384["m_columns"][] = "candidato6";
-$proto384["m_columns"][] = "candidato7";
-$proto384["m_columns"][] = "candidato8";
-$proto384["m_columns"][] = "candidato9";
-$proto384["m_columns"][] = "candidato10";
-$proto384["m_columns"][] = "candidato11";
-$proto384["m_columns"][] = "candidato12";
-$proto384["m_columns"][] = "validos";
-$proto384["m_columns"][] = "blancos";
-$proto384["m_columns"][] = "nulos";
-$proto384["m_columns"][] = "utilizados";
-$proto384["m_columns"][] = "no_utilizados";
-$proto384["m_columns"][] = "total";
-$proto384["m_columns"][] = "usuario";
-$proto384["m_columns"][] = "fecha";
-$proto384["m_columns"][] = "editado_por";
-$proto384["m_columns"][] = "fecha_edicion";
-$obj = new SQLTable($proto384);
+$proto353["m_fieldlist"][]=$obj;
+$proto353["m_fromlist"] = array();
+												$proto362=array();
+$proto362["m_link"] = "SQLL_MAIN";
+			$proto363=array();
+$proto363["m_strName"] = "voto_alcalde";
+$proto363["m_srcTableName"] = "Alc - Por Sector";
+$proto363["m_columns"] = array();
+$proto363["m_columns"][] = "elecciones";
+$proto363["m_columns"][] = "id_urna";
+$proto363["m_columns"][] = "candidato1";
+$proto363["m_columns"][] = "candidato2";
+$proto363["m_columns"][] = "candidato3";
+$proto363["m_columns"][] = "candidato4";
+$proto363["m_columns"][] = "candidato5";
+$proto363["m_columns"][] = "candidato6";
+$proto363["m_columns"][] = "candidato7";
+$proto363["m_columns"][] = "candidato8";
+$proto363["m_columns"][] = "candidato9";
+$proto363["m_columns"][] = "candidato10";
+$proto363["m_columns"][] = "candidato11";
+$proto363["m_columns"][] = "candidato12";
+$proto363["m_columns"][] = "validos";
+$proto363["m_columns"][] = "blancos";
+$proto363["m_columns"][] = "nulos";
+$proto363["m_columns"][] = "utilizados";
+$proto363["m_columns"][] = "no_utilizados";
+$proto363["m_columns"][] = "total";
+$proto363["m_columns"][] = "usuario";
+$proto363["m_columns"][] = "fecha";
+$proto363["m_columns"][] = "editado_por";
+$proto363["m_columns"][] = "fecha_edicion";
+$obj = new SQLTable($proto363);
 
-$proto383["m_table"] = $obj;
-$proto383["m_sql"] = "voto_alcalde as a";
-$proto383["m_alias"] = "a";
-$proto383["m_srcTableName"] = "Alc - Por Sector";
-$proto385=array();
-$proto385["m_sql"] = "";
-$proto385["m_uniontype"] = "SQLL_UNKNOWN";
+$proto362["m_table"] = $obj;
+$proto362["m_sql"] = "voto_alcalde as a";
+$proto362["m_alias"] = "a";
+$proto362["m_srcTableName"] = "Alc - Por Sector";
+$proto364=array();
+$proto364["m_sql"] = "";
+$proto364["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto385["m_column"]=$obj;
-$proto385["m_contained"] = array();
-$proto385["m_strCase"] = "";
-$proto385["m_havingmode"] = false;
-$proto385["m_inBrackets"] = false;
-$proto385["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto385);
+$proto364["m_column"]=$obj;
+$proto364["m_contained"] = array();
+$proto364["m_strCase"] = "";
+$proto364["m_havingmode"] = false;
+$proto364["m_inBrackets"] = false;
+$proto364["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto364);
 
-$proto383["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto383);
+$proto362["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto362);
 
-$proto374["m_fromlist"][]=$obj;
-												$proto387=array();
-$proto387["m_link"] = "SQLL_INNERJOIN";
-			$proto388=array();
-$proto388["m_strName"] = "urna";
-$proto388["m_srcTableName"] = "Alc - Por Sector";
-$proto388["m_columns"] = array();
-$proto388["m_columns"][] = "id_distrito";
-$proto388["m_columns"][] = "id_sector";
-$proto388["m_columns"][] = "id_urna";
-$proto388["m_columns"][] = "nombre_centro";
-$proto388["m_columns"][] = "ubicación";
-$proto388["m_columns"][] = "votantes";
-$obj = new SQLTable($proto388);
+$proto353["m_fromlist"][]=$obj;
+												$proto366=array();
+$proto366["m_link"] = "SQLL_INNERJOIN";
+			$proto367=array();
+$proto367["m_strName"] = "urna";
+$proto367["m_srcTableName"] = "Alc - Por Sector";
+$proto367["m_columns"] = array();
+$proto367["m_columns"][] = "id_distrito";
+$proto367["m_columns"][] = "id_sector";
+$proto367["m_columns"][] = "id_urna";
+$proto367["m_columns"][] = "nombre_centro";
+$proto367["m_columns"][] = "ubicación";
+$proto367["m_columns"][] = "votantes";
+$obj = new SQLTable($proto367);
 
-$proto387["m_table"] = $obj;
-$proto387["m_sql"] = "inner join urna as u on a.id_urna = u.id_urna";
-$proto387["m_alias"] = "u";
-$proto387["m_srcTableName"] = "Alc - Por Sector";
-$proto389=array();
-$proto389["m_sql"] = "a.id_urna = u.id_urna";
-$proto389["m_uniontype"] = "SQLL_UNKNOWN";
+$proto366["m_table"] = $obj;
+$proto366["m_sql"] = "inner join urna as u on a.id_urna = u.id_urna";
+$proto366["m_alias"] = "u";
+$proto366["m_srcTableName"] = "Alc - Por Sector";
+$proto368=array();
+$proto368["m_sql"] = "a.id_urna = u.id_urna";
+$proto368["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "id_urna",
 	"m_strTable" => "a",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto389["m_column"]=$obj;
-$proto389["m_contained"] = array();
-$proto389["m_strCase"] = "= u.id_urna";
-$proto389["m_havingmode"] = false;
-$proto389["m_inBrackets"] = false;
-$proto389["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto389);
+$proto368["m_column"]=$obj;
+$proto368["m_contained"] = array();
+$proto368["m_strCase"] = "= u.id_urna";
+$proto368["m_havingmode"] = false;
+$proto368["m_inBrackets"] = false;
+$proto368["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto368);
 
-$proto387["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto387);
+$proto366["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto366);
 
-$proto374["m_fromlist"][]=$obj;
-$proto374["m_groupby"] = array();
-$proto374["m_orderby"] = array();
-$proto374["m_srcTableName"]="Alc - Por Sector";		
-$obj = new SQLQuery($proto374);
+$proto353["m_fromlist"][]=$obj;
+$proto353["m_groupby"] = array();
+$proto353["m_orderby"] = array();
+$proto353["m_srcTableName"]="Alc - Por Sector";		
+$obj = new SQLQuery($proto353);
 
-$proto373["m_sql"] = "(select sum(a.total) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector)";
-$proto373["m_srcTableName"] = "Alc - Por Sector";
-$proto373["m_expr"]=$obj;
-$proto373["m_alias"] = "Total";
-$obj = new SQLFieldListItem($proto373);
+$proto352["m_sql"] = "(select sum(a.total) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector)";
+$proto352["m_srcTableName"] = "Alc - Por Sector";
+$proto352["m_expr"]=$obj;
+$proto352["m_alias"] = "Total";
+$obj = new SQLFieldListItem($proto352);
 
 $proto0["m_fieldlist"][]=$obj;
 $proto0["m_fromlist"] = array();
-												$proto391=array();
-$proto391["m_link"] = "SQLL_MAIN";
-			$proto392=array();
-$proto392["m_strName"] = "voto_alcalde";
-$proto392["m_srcTableName"] = "Alc - Por Sector";
-$proto392["m_columns"] = array();
-$proto392["m_columns"][] = "elecciones";
-$proto392["m_columns"][] = "id_urna";
-$proto392["m_columns"][] = "candidato1";
-$proto392["m_columns"][] = "candidato2";
-$proto392["m_columns"][] = "candidato3";
-$proto392["m_columns"][] = "candidato4";
-$proto392["m_columns"][] = "candidato5";
-$proto392["m_columns"][] = "candidato6";
-$proto392["m_columns"][] = "candidato7";
-$proto392["m_columns"][] = "candidato8";
-$proto392["m_columns"][] = "candidato9";
-$proto392["m_columns"][] = "candidato10";
-$proto392["m_columns"][] = "candidato11";
-$proto392["m_columns"][] = "candidato12";
-$proto392["m_columns"][] = "validos";
-$proto392["m_columns"][] = "blancos";
-$proto392["m_columns"][] = "nulos";
-$proto392["m_columns"][] = "utilizados";
-$proto392["m_columns"][] = "no_utilizados";
-$proto392["m_columns"][] = "total";
-$proto392["m_columns"][] = "usuario";
-$proto392["m_columns"][] = "fecha";
-$proto392["m_columns"][] = "editado_por";
-$proto392["m_columns"][] = "fecha_edicion";
-$obj = new SQLTable($proto392);
+												$proto370=array();
+$proto370["m_link"] = "SQLL_MAIN";
+			$proto371=array();
+$proto371["m_strName"] = "voto_alcalde";
+$proto371["m_srcTableName"] = "Alc - Por Sector";
+$proto371["m_columns"] = array();
+$proto371["m_columns"][] = "elecciones";
+$proto371["m_columns"][] = "id_urna";
+$proto371["m_columns"][] = "candidato1";
+$proto371["m_columns"][] = "candidato2";
+$proto371["m_columns"][] = "candidato3";
+$proto371["m_columns"][] = "candidato4";
+$proto371["m_columns"][] = "candidato5";
+$proto371["m_columns"][] = "candidato6";
+$proto371["m_columns"][] = "candidato7";
+$proto371["m_columns"][] = "candidato8";
+$proto371["m_columns"][] = "candidato9";
+$proto371["m_columns"][] = "candidato10";
+$proto371["m_columns"][] = "candidato11";
+$proto371["m_columns"][] = "candidato12";
+$proto371["m_columns"][] = "validos";
+$proto371["m_columns"][] = "blancos";
+$proto371["m_columns"][] = "nulos";
+$proto371["m_columns"][] = "utilizados";
+$proto371["m_columns"][] = "no_utilizados";
+$proto371["m_columns"][] = "total";
+$proto371["m_columns"][] = "usuario";
+$proto371["m_columns"][] = "fecha";
+$proto371["m_columns"][] = "editado_por";
+$proto371["m_columns"][] = "fecha_edicion";
+$obj = new SQLTable($proto371);
 
-$proto391["m_table"] = $obj;
-$proto391["m_sql"] = "voto_alcalde as va";
-$proto391["m_alias"] = "va";
-$proto391["m_srcTableName"] = "Alc - Por Sector";
-$proto393=array();
-$proto393["m_sql"] = "";
-$proto393["m_uniontype"] = "SQLL_UNKNOWN";
+$proto370["m_table"] = $obj;
+$proto370["m_sql"] = "voto_alcalde as va";
+$proto370["m_alias"] = "va";
+$proto370["m_srcTableName"] = "Alc - Por Sector";
+$proto372=array();
+$proto372["m_sql"] = "";
+$proto372["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto393["m_column"]=$obj;
-$proto393["m_contained"] = array();
-$proto393["m_strCase"] = "";
-$proto393["m_havingmode"] = false;
-$proto393["m_inBrackets"] = false;
-$proto393["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto393);
+$proto372["m_column"]=$obj;
+$proto372["m_contained"] = array();
+$proto372["m_strCase"] = "";
+$proto372["m_havingmode"] = false;
+$proto372["m_inBrackets"] = false;
+$proto372["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto372);
 
-$proto391["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto391);
+$proto370["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto370);
 
 $proto0["m_fromlist"][]=$obj;
-												$proto395=array();
-$proto395["m_link"] = "SQLL_INNERJOIN";
-			$proto396=array();
-$proto396["m_strName"] = "urna";
-$proto396["m_srcTableName"] = "Alc - Por Sector";
-$proto396["m_columns"] = array();
-$proto396["m_columns"][] = "id_distrito";
-$proto396["m_columns"][] = "id_sector";
-$proto396["m_columns"][] = "id_urna";
-$proto396["m_columns"][] = "nombre_centro";
-$proto396["m_columns"][] = "ubicación";
-$proto396["m_columns"][] = "votantes";
-$obj = new SQLTable($proto396);
+												$proto374=array();
+$proto374["m_link"] = "SQLL_INNERJOIN";
+			$proto375=array();
+$proto375["m_strName"] = "urna";
+$proto375["m_srcTableName"] = "Alc - Por Sector";
+$proto375["m_columns"] = array();
+$proto375["m_columns"][] = "id_distrito";
+$proto375["m_columns"][] = "id_sector";
+$proto375["m_columns"][] = "id_urna";
+$proto375["m_columns"][] = "nombre_centro";
+$proto375["m_columns"][] = "ubicación";
+$proto375["m_columns"][] = "votantes";
+$obj = new SQLTable($proto375);
 
-$proto395["m_table"] = $obj;
-$proto395["m_sql"] = "inner join urna as ur on va.id_urna = ur.id_urna";
-$proto395["m_alias"] = "ur";
-$proto395["m_srcTableName"] = "Alc - Por Sector";
-$proto397=array();
-$proto397["m_sql"] = "va.id_urna = ur.id_urna";
-$proto397["m_uniontype"] = "SQLL_UNKNOWN";
+$proto374["m_table"] = $obj;
+$proto374["m_sql"] = "inner join urna as ur on va.id_urna = ur.id_urna";
+$proto374["m_alias"] = "ur";
+$proto374["m_srcTableName"] = "Alc - Por Sector";
+$proto376=array();
+$proto376["m_sql"] = "va.id_urna = ur.id_urna";
+$proto376["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "id_urna",
 	"m_strTable" => "va",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto397["m_column"]=$obj;
-$proto397["m_contained"] = array();
-$proto397["m_strCase"] = "= ur.id_urna";
-$proto397["m_havingmode"] = false;
-$proto397["m_inBrackets"] = false;
-$proto397["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto397);
+$proto376["m_column"]=$obj;
+$proto376["m_contained"] = array();
+$proto376["m_strCase"] = "= ur.id_urna";
+$proto376["m_havingmode"] = false;
+$proto376["m_inBrackets"] = false;
+$proto376["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto376);
 
-$proto395["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto395);
+$proto374["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto374);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
-												$proto399=array();
+												$proto378=array();
 						$obj = new SQLField(array(
 	"m_strName" => "id_sector",
 	"m_strTable" => "ur",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto399["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto399);
+$proto378["m_column"]=$obj;
+$obj = new SQLGroupByItem($proto378);
 
 $proto0["m_groupby"][]=$obj;
 $proto0["m_orderby"] = array();
-												$proto401=array();
+												$proto380=array();
 						$obj = new SQLField(array(
 	"m_strName" => "id_sector",
 	"m_strTable" => "ur",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
 
-$proto401["m_column"]=$obj;
-$proto401["m_bAsc"] = 1;
-$proto401["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto401);
+$proto380["m_column"]=$obj;
+$proto380["m_bAsc"] = 1;
+$proto380["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto380);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="Alc - Por Sector";		
@@ -7033,7 +6701,7 @@ $queryData_alc___por_sector = createSqlQuery_alc___por_sector();
 	
 		;
 
-																					
+																				
 
 $tdataalc___por_sector[".sqlquery"] = $queryData_alc___por_sector;
 

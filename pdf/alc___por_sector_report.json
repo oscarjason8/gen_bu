@@ -63,14 +63,13 @@ pdfDocument = {
 										"%",
 										"%",
 										"%",
-										"%",
 															],
 							
 				body: [
 				{BEGIN standalone_page}
 					[
 						{
-							colSpan: 6,
+							colSpan: 5,
 							border:[false, false,false,false],
 							stack: [
 
@@ -175,10 +174,6 @@ pdfDocument = {
 		text: '{$jslabel Alc___Por_Sector LIBRE }',
 		alignment: '{$LIBRE_align}',
 	},
-		{
-		text: '{$jslabel Alc___Por_Sector Otros }',
-		alignment: '{$Otros_align}',
-	},
 	],
 
 {BEGIN grid_row}
@@ -203,10 +198,6 @@ pdfDocument = {
 		{	
 		text: {$LIBRE_value},
 		alignment: '{$LIBRE_align}',
-	},
-		{	
-		text: {$Otros_value},
-		alignment: '{$Otros_align}',
 	},
 	],
 	{END row_data}
@@ -233,10 +224,6 @@ pdfDocument = {
 		text: '{$jslabel Alc___Por_Sector LIBRE }',
 		alignment: '{$LIBRE_align}',
 	},
-		{	
-		text: '{$jslabel Alc___Por_Sector Otros }',
-		alignment: '{$Otros_align}',
-	},
 	],
 
 
@@ -252,7 +239,7 @@ pdfDocument = {
 	[
 		{
 			text: 'Resumen global {$global_total_cnt} - Registros totales',
-			colSpan: 6,
+			colSpan: 5,
 			style: 'globalsummary',
 		}
 	],
@@ -304,16 +291,6 @@ pdfDocument = {
 
 			 
 			alignment: '{$LIBRE_align}',
-					},
-							{
-			text: [
-			
-							{$global_totalOtros_sum},
-						],
-			style: 'globalsummary',
-
-			 
-			alignment: '{$Otros_align}',
 					},
 			],
 	

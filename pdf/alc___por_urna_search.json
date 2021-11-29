@@ -164,9 +164,6 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_search_field15}","text":{$PINU_pdfvalue}},
 				
-				
-			{"hidden":"{$item_hide_integrated_search_field16}","text":{$Otros_pdfvalue}},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

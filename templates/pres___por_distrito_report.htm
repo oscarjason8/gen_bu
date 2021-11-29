@@ -448,9 +448,6 @@
                         <TH class="{$fieldclass_LIBRE}">
                           {$label Pres___Por_Distrito LIBRE}
                         </th>
-                        <TH class="{$fieldclass_Otros}">
-                          {$label Pres___Por_Distrito Otros}
-                        </th>
                       </tr>
                     {END grid_header}
                   </thead>
@@ -478,11 +475,6 @@
                               {$LIBRE_value}
                             </span>
                           </td>
-                          <TD {$recordattrs} class="{$fieldclass_Otros}">
-                            <span data-itemtype="grid_field" data-field="Otros" data-itemid="grid_field6" data-pageid={$pageid} data-record-id="{$recId}">
-                              {$Otros_value}
-                            </span>
-                          </td>
                         </tr>
                       {END row_data}
                     {END grid_row}
@@ -504,10 +496,6 @@
                         <TD class="globalsummary 0 {$fieldclass_LIBRE}">
                           {$global_totalLIBRE_sum}
                           &nbsp({$can7}%)
-                        </td>
-                        <TD class="globalsummary rnr-edge {$fieldclass_Otros}">
-                          {$global_totalOtros_sum}
-                          &nbsp({$otros}%)
                         </td>
                       </tr>
                     {END global_summary}
