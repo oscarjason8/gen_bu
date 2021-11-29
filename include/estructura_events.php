@@ -14,6 +14,8 @@
 	// fill list of events
 		$this->events["BeforeProcessList"]=true;
 
+		$this->events["BeforeQueryList"]=true;
+
 
 	}
 
@@ -54,6 +56,82 @@ CustomQuery($sqlest);
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// List page: Before SQL query
+function BeforeQueryList(&$strSQL, &$strWhereClause, &$strOrderBy, &$pageObject)
+{
+
+		
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+$strWhereClause = "usuario = '".$_SESSION['UserID']."'";
+;		
+} // function BeforeQueryList
+
 		
 		
 		

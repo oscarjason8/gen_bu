@@ -2095,6 +2095,7 @@ $obj = new SQLFromListItem($proto28);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
+$proto0["m_orderby"] = array();
 												$proto32=array();
 						$obj = new SQLField(array(
 	"m_strName" => "cor",
@@ -2103,21 +2104,9 @@ $proto0["m_groupby"] = array();
 ));
 
 $proto32["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto32);
-
-$proto0["m_groupby"][]=$obj;
-$proto0["m_orderby"] = array();
-												$proto34=array();
-						$obj = new SQLField(array(
-	"m_strName" => "cor",
-	"m_strTable" => "estructura",
-	"m_srcTableName" => "estructura"
-));
-
-$proto34["m_column"]=$obj;
-$proto34["m_bAsc"] = 1;
-$proto34["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto34);
+$proto32["m_bAsc"] = 1;
+$proto32["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto32);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="estructura";		
