@@ -277,13 +277,13 @@ $tdataalc___por_sector[".reportLayout"] = 6;
 
 
 
-$tstrOrderBy = "order by ur.id_distrito";
+$tstrOrderBy = "order by ur.id_sector";
 if(strlen($tstrOrderBy) && strtolower(substr($tstrOrderBy,0,8))!="order by")
 	$tstrOrderBy = "order by ".$tstrOrderBy;
 $tdataalc___por_sector[".strOrderBy"] = $tstrOrderBy;
 
 $tdataalc___por_sector[".orderindexes"] = array();
-	$tdataalc___por_sector[".orderindexes"][] = array(1, (1 ? "ASC" : "DESC"), "ur.id_distrito");
+	$tdataalc___por_sector[".orderindexes"][] = array(2, (1 ? "ASC" : "DESC"), "ur.id_sector");
 
 
 
@@ -3377,7 +3377,7 @@ $proto0["m_strHead"] = "select";
 $proto0["m_strFieldList"] = "ur.id_distrito, ur.id_sector,  (select concat(sum(a.candidato1), \" (\", ROUND(((((sum(a.candidato1)/(sum(validos)))))*100),1), \"%)\")   from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as PAC,  (select concat(sum(a.candidato2), \" (\", ROUND((((sum(a.candidato2)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as FAPER,  (select concat(sum(a.candidato3), \" (\", ROUND((((sum(a.candidato3)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as NUEVA_RUTA,  (select concat(sum(a.candidato4), \" (\", ROUND((((sum(a.candidato4)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as ALIANZA_PAT,  (select concat(sum(a.candidato5), \" (\", ROUND((((sum(a.candidato5)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as LIBRE,  (select concat(sum(a.candidato6), \" (\", ROUND((((sum(a.candidato6)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as PSH,  (select concat(sum(a.candidato7), \" (\", ROUND((((sum(a.candidato7)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as LIDEHR,  (select concat(sum(a.candidato8), \" (\", ROUND((((sum(a.candidato8)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as DC,  (select concat(sum(a.candidato9), \" (\", ROUND((((sum(a.candidato9)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as TSH,  (select concat(sum(a.candidato10), \" (\", ROUND((((sum(a.candidato10)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as LIBERAL,  (select concat(sum(a.candidato11), \" (\", ROUND((((sum(a.candidato11)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as NACIONAL,  (select concat(sum(a.candidato12), \" (\", ROUND((((sum(a.candidato12)/(sum(validos))))*100),1), \"%)\")  from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as PINU,  (select concat(((sum(p.candidato1)) + (sum(p.candidato2)) + (sum(p.candidato3)) + (sum(p.candidato4)) + (sum(p.candidato5)) + (sum(p.candidato6)) + (sum(p.candidato8))   + (sum(p.candidato9)) + (sum(p.candidato12))), \" (\", ROUND((((((sum(p.candidato1)) + (sum(p.candidato2)) + (sum(p.candidato3)) + (sum(p.candidato4)) + (sum(p.candidato5)) + (sum(p.candidato6)) + (sum(p.candidato8))   + (sum(p.candidato9)) + (sum(p.candidato12))) / (sum(validos))))*100),1), \"%)\")  from voto_presidente as p  inner join urna as u on p.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Otros,  (select sum(a.validos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Validos,  (select sum(a.blancos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Blancos,  (select sum(a.nulos) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Nulos,  (select sum(a.utilizados) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Utilizados,  (select sum(a.no_utilizados) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as No_Utilizados,  (select sum(a.total) from voto_alcalde as a  inner join urna as u on a.id_urna = u.id_urna where u.id_sector = ur.id_sector) as Total";
 $proto0["m_strFrom"] = "from voto_alcalde as va  inner join urna as ur on va.id_urna = ur.id_urna";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "order by ur.id_distrito";
+$proto0["m_strOrderBy"] = "order by ur.id_sector";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -6999,7 +6999,7 @@ $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 												$proto399=array();
 						$obj = new SQLField(array(
-	"m_strName" => "id_distrito",
+	"m_strName" => "id_sector",
 	"m_strTable" => "ur",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
@@ -7011,7 +7011,7 @@ $proto0["m_groupby"][]=$obj;
 $proto0["m_orderby"] = array();
 												$proto401=array();
 						$obj = new SQLField(array(
-	"m_strName" => "id_distrito",
+	"m_strName" => "id_sector",
 	"m_strTable" => "ur",
 	"m_srcTableName" => "Alc - Por Sector"
 ));
